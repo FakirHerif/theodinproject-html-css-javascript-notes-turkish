@@ -39,7 +39,7 @@ Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulun
 
 - [HTML, CSS ve Javascript arasındaki fark nedir?](https://brytdesigns.com/html-css-javascript-whats-the-difference)
     - **Cevap:** Örnekle açıklamak gerekirse; HTML bir binayı ayakta tutan kolon ve iskeleti, CSS ise o binanın rengi ve tasarımıdır. Javascript ise o binanın asansör ve otomatik kapılarıdır diyebiliriz. 
-[Görsel](.\images\1.jpg?raw=true)
+[Görsel](/1-HTML%20TEMELLERİ\images\1.jpg)
 
 # Ek Kaynaklar
 
