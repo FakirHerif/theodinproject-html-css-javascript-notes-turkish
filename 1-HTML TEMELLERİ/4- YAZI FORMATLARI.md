@@ -236,7 +236,10 @@ Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulun
 - [Sibling ne anlam ifade eder?](https://www.theodinproject.com/lessons/foundations-working-with-text#elements-same-level)
     - Cevap: Aynı nesting'e sahip kardeş ikilidir.
 - [HTML'de kendi notlarınızı websayfanız üzerinde görünmeden nasıl oluşturursunuz?](https://www.theodinproject.com/lessons/foundations-working-with-text#html-comments)
-    - Cevap: <!-- -->
+    - Cevap: 
+    ``` 
+    <!-- --> 
+    ```
 
 # Ek Kaynaklar
 
