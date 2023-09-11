@@ -222,15 +222,27 @@ kısayollarını kullanabilirsiniz.
 Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. Eğer soruları yanıtlarken sorun yaşıyorsanız sorunun üzerine tıklayın ve bağlantıyı inceleyin. (Bağlantılar ingilizcedir.)
 
 - [HTML'de paragraf nasıl oluşturulur?](https://www.theodinproject.com/lessons/foundations-working-with-text#create-paragraph-element)
-    - Cevap: p etiketi kullanılır.
-- [HTML'de başlık nasıl oluşturulur?](https://www.theodinproject.com/lessons/foundations-working-with-text#headings)
-    - Cevap: h etiketleri kullanılır.
+    - Cevap:
+    ``` 
+    <p></p>
+    ```
+- [HTML'de en büyük başlık nasıl oluşturulur?](https://www.theodinproject.com/lessons/foundations-working-with-text#headings)
+    - Cevap:
+    ``` 
+    <h1></h1>
+    ```
 - [HTML'de kaç farklı başlık vardır ve aralarındaki farklar nelerdir?](https://www.theodinproject.com/lessons/foundations-working-with-text#different-heading-level)
     - Cevap: h1'den h6'ya kadar bulunan 6 farklı başlık etiketi vardır. h1 en büyük olmak üzere h6 ya kadar boyutu ufalarak devam eden başlık etiketleridir.
 - [Metni kalın yapmak için hangi etiketi kullanmalısınız?](https://www.theodinproject.com/lessons/foundations-working-with-text#strong-element)
-    - Cevap: strong etiketi kullanılır.
+    - Cevap:
+    ``` 
+    <strong></strong>
+    ```
 - [Metni italik yapmak için hangi etiketi kullanmalısınız?](https://www.theodinproject.com/lessons/foundations-working-with-text#em-element)
-    - Cevap: em etiketi kullanılır.
+    - Cevap:
+    ``` 
+    <em></em>
+    ```
 - [Child ve Parent İlişkisi nedir?](https://www.theodinproject.com/lessons/foundations-working-with-text#nested-relationship)
     - Cevap: Child parent'in içine sarılmış etiketlerdir.
 - [Sibling ne anlam ifade eder?](https://www.theodinproject.com/lessons/foundations-working-with-text#elements-same-level)
