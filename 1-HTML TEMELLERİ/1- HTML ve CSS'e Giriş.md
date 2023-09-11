@@ -43,9 +43,9 @@ Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulun
 
 # Ek Kaynaklar
 
-Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz.
+Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz. (Bağlantı içerikleri ingilizcedir.)
 
 - [FreeCodeCamp Makalesi](https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/) Öğrendiklerimizden daha derine iniyor. Ancak daha sonraki derslerde ele aldığımız ve öğreneceğimiz şeyleri kapsıyor. Bu yüzden herhangi bir detayı ezberlemenize gerek yok.
-- [Bu Bağlantıyı Yer İmlerinize Ekleyin - Devdocs.io](https://devdocs.io/) Bir hoşgeldin mesajıyla karşılaşacaksınız. Çevrimdışı bile çalışabilen devasa büyüklükte bir API dökümantasyonudur. Yani tüm konu ve içerikleri ayrıntılı bir şekilde burada yer almaktadır. (Bağlantı içeriği ingilizcedir.)
+- [Bu Bağlantıyı Yer İmlerinize Ekleyin - Devdocs.io](https://devdocs.io/) Bir hoşgeldin mesajıyla karşılaşacaksınız. Çevrimdışı bile çalışabilen devasa büyüklükte bir API dökümantasyonudur. Yani tüm konu ve içerikleri ayrıntılı bir şekilde burada yer almaktadır.
 
 
