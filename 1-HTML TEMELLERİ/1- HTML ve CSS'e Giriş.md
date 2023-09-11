@@ -25,7 +25,7 @@ Piyasadaki pek çok harika kaynak HTML ve CSS'i programlama dili olarak tanıtma
 Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. Eğer soruları yanıtlarken sorun yaşıyorsanız sorunun üzerine tıklayın ve bağlantıyı inceleyin. (Bağlantılar ingilizcedir.)
 
 - [HTML ve CSS Ne anlama gelmektedir?](https://brytdesigns.com/html-css-javascript-whats-the-difference#What_is_HTML)
-    -Cevap: **HTML,** Hiper Metin İşaretleme Dilidir. (HTML, İngilizce HyperText Markup Language kelimelerinin baş harflerinin kısaltılmasıdır.) Web sayfalarını oluşturmak için kullanılan standart metin işaretleme dilidir ayrıca bir programlama dili olarak tanımlanamaz. HTML kodlarıyla kendi başına çalışan bir program yazılamaz. HTML, küçüktür ve büyüktür işaretleri arasına girilen HTML etiketleri kullanılarak yazılır (ör: <html>). İşaretlenen metnin başını ve sonunu belirtmek için çoğunlukla çift olarak kullanılırlar (Örnek: <h1>Selam</h1>) ancak, işaretlemek yerine metnin bir yerine bir işaret konacaksa tek olarak da kullanılabilirler (Ör: <img>). Kısaca HTML; web sitelerinin temelini oluşturarak, sayfa biçimlendirmesi ve içeriğin gösterilmesini sağlar. Statik web tasarımı için kullanılır ve diğer programlama dilleri ile birlikte kullanılarak dinamik web siteleri oluşturulabilir.
+    -Cevap: **HTML,** Hiper Metin İşaretleme Dilidir. (HTML, İngilizce HyperText Markup Language kelimelerinin baş harflerinin kısaltılmasıdır.) Web sayfalarını oluşturmak için kullanılan standart metin işaretleme dilidir ayrıca bir programlama dili olarak tanımlanamaz. HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Kısaca HTML; web sitelerinin temelini oluşturarak, sayfa biçimlendirmesi ve içeriğin gösterilmesini sağlar. Statik web tasarımı için kullanılır ve diğer programlama dilleri ile birlikte kullanılarak dinamik web siteleri oluşturulabilir.
     **CSS,** Cascading Style Sheets (Basamaklı Stil Şablonları ya da Basamaklı Biçim Sayfaları, bilinen kısa adıyla CSS), HTML'e ek olarak metin ve format biçimlendirme alanında fazladan olanaklar sunan bir işaretleme dilidir. Kısaca CSS; HTML ile birlikte entegre şekilde çalışan, oluşturduğunuz web sayfalarında yapacağınız özellikleri geliştirmenize olanak sağlar. Web sayfalarının renklerini, fontlarını, görsel efektlerini, mizanpajını ve tüm öğeleri CSS stil şablonlarıyla biçimlendirebilirsiniz.
 - [Bir web sayfasına metin paragrafları koymak için HTML ve CSS arasından hangisini kullanacaksınız?](https://www.theodinproject.com/lessons/foundations-introduction-to-html-and-css#html-and-css)
     -Cevap: HTML
@@ -33,7 +33,7 @@ Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulun
     -Cevap: CSS
 - [HTML, CSS ve Javascript arasındaki fark nedir?](https://brytdesigns.com/html-css-javascript-whats-the-difference)
     -Cevap: Örnekle açıklamak gerekirse; HTML bir binayı ayakta tutan kolon ve iskeleti, CSS ise o binanın rengi ve tasarımıdır. Javascript ise o binanın asansör ve otomatik kapılarıdır diyebiliriz. 
-[Görsel](\görseller\1.jpg)
+[Görsel](.\görseller\1.jpg)
 
 # Ek Kaynaklar
 
