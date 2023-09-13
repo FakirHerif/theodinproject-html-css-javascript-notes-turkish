@@ -62,12 +62,12 @@ HTML'e başka bir "div" daha eklerseniz diğer kutuların yanında eşit boyutla
 Gördüğünüz gibi, flexbox yalnızca tek bir CSS özelliği değil, ihtiyacınız olan yere öğeleri yerleştirmek için kullanabileceğiniz bir dizi özelliklerdir. Bu özelliklerin bazıları flex konteynerıne aittir, bazıları ise flex öğelerine aittir. Bu basit ama önemli bir kavramdır.
 
 Bir flex konteyneri, üzerinde display: flex bulunan herhangi bir öğedir. Bir flex öğesi ise doğrudan bir flex konteynerının içinde bulunan herhangi bir öğedir.
-[Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/03.png)
+![Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/03.png)
 
 Biraz kafa karıştırıcı olabilir, herhangi bir öğe hem bir flex konteynerı hem de bir flex öğesi olabilir. Yani; bir öğe, display: flex özelliğine sahip olduğunda, bu öğe bir "flex konteyneri" olur. Örneğin, bir div öğesini alıp üzerine display: flex; stilini eklediğinizde, bu öğe artık içindeki diğer öğeleri düzenlemek için bir "flex konteyneri" olarak davranır.
 
 Bir öğe, display: flex özelliğine sahip bir flex konteyneri içinde bulunuyorsa, bu öğe bir "flex öğesi" olur. Örneğin, yukarıdaki flex konteynerine eklediğiniz bir başka div öğesi, bu konteynerin içinde bir "flex öğesi" olur ve bu iç öğeleri düzenlemek için flexbox özelliklerini kullanabilirsiniz.
-[Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/04.png)
+![Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/04.png)
 
 Yani herhangi bir öğe hem bir flex konteyneri hem de bir flex öğesi olabilir ve bu sayede esnek bir düzen oluşturmak için iç içe geçmiş flex konteynerleri ve flex öğeleri oluşturabilirsiniz. Bu, esnek ve karmaşık düzenler oluşturmak için oldukça güçlü bir araçtır.
 ![Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/05.png)
