@@ -280,7 +280,7 @@ Evet gördüğünüz gibi yerleştirdiğimiz görsel için **"alt"** kısmına b
 
 # Bilgi Kontrolü
 
-Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. Eğer soruları yanıtlarken sorun yaşıyorsanız sorunun üzerine tıklayın ve bağlantıyı inceleyin. (Bağlantılar ingilizcedir.) (Bu bölümden itibaren Bilgi Kontrolü başlıkları altındaki soruların cevapları verilmeyecektir. Notları takip eden kişilerin sağlıklı bir ilerleme sağlayabilmeleri için kendilerinin çözmeleri beklenmektedir.)
+Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. (Bu bölümden itibaren Bilgi Kontrolü başlıkları altındaki soruların cevapları verilmeyecektir. Notları takip eden kişilerin sağlıklı bir ilerleme sağlayabilmeleri için kendilerinin çözmeleri beklenmektedir.)
 
 - Bağlantı oluşturmak için hangi etiket kullanılır?
 - Nitelik nedir?

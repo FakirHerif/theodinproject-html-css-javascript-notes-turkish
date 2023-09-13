@@ -299,7 +299,7 @@ Not: Bu alıştırmaların çözümleri her alıştırmanın içinde bulunan **"
 
 # Bilgi Kontrolü
 
-Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. Eğer soruları yanıtlarken sorun yaşıyorsanız sorunun üzerine tıklayın ve bağlantıyı inceleyin. (Bağlantılar ingilizcedir.)
+Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır.
 
 - Sınıf ve kimlik seçicilerin sözdizimi nedir?
 - Tek bir kuralı iki farklı seçiciye nasıl uygularsınız?

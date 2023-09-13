@@ -76,7 +76,7 @@ Bir proje üzerinde çalıştığınız süreç boyunca attığınız commit her
 
 # Bilgi Kontrolü
 
-Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. Eğer soruları yanıtlarken sorun yaşıyorsanız sorunun üzerine tıklayın ve bağlantıyı inceleyin. (Bağlantılar ingilizcedir.) (Bir önceki bölümde bilgilendirdiğim üzere; Bilgi Kontrolü başlıkları altındaki soruların cevapları verilmeyecektir. Notları takip eden kişilerin sağlıklı bir ilerleme sağlayabilmeleri için kendilerinin çözmeleri beklenmektedir.)
+Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır. (Bir önceki bölümde bilgilendirdiğim üzere; Bilgi Kontrolü başlıkları altındaki soruların cevapları verilmeyecektir. Notları takip eden kişilerin sağlıklı bir ilerleme sağlayabilmeleri için kendilerinin çözmeleri beklenmektedir.)
 
 - İyi yazılmış commit'lerin ve sağlam bir commit geçmişine sahip olmanın faydaları nelerdir?
 - Commit'ler için GitHub'ın maximum kaç karakterlik bir sınırı vardır?
