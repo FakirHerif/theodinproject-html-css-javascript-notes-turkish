@@ -198,29 +198,30 @@ Bu örnekte .warning kuralı yazılan son kural olduğu için uygulanacak kural 
 Not: Bu alıştırmanın çözümü alıştırmanın içinde bulunan **"solution"** klasöründe/dizininde yer almaktadır.
 
 - HTML Temelleri bölümünden pratik olarak oluşturduğunuz Tarif sayfasını hatırlıyor musunuz? Oldukça sade görünüyor, değil mi? Biraz CSS ekleyerek bunu düzeltelim!
-    - Nasıl stil vereceğniz tamamen size kalmış, CSS yöntemini kullanmalısınız. Önceki derste bahsedilen birkaç özelliği kullanmayı deneyin (renk, arka plan rengi, yazı tipi özellikleri vb.). Farklı özellikler denemek ve ne yaptıklarını anlamak için kendinize biraz zaman tanıyın. Şu an için projenizin iyi görünüp görünmemesini düşünmeyin. Şuan sadece alıştırma yapmak ve CSS yazmayı alışkanlık haline getirmeyi hedefleyin. Bu çalışma, portföyünüzde sergilemeniz için yapılan bir çalışma değildir.
-
-    - Özel bir yazı tipini nasul kullancağımızı henüz öğrenmedik, bu nedenle şimdilik kullanabileceğiniz genel fontların listesini bulmak için [CSS Fonts](https://www.w3schools.com/Css/css_font.asp) sayfasına göz atın ve CSS için en iyi ve güvenli fontlar için [CSS Web Safe Fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) sayfasına göz atın. Bu sayfadaki fontlar, her bilgisayar ve cihazda hazır bir şekilde yüklü ve kullanılabilir haldedir. (ancak yine de yedek olarak farklı bir font eklemeyi unutmayın).
-
-    # Bilgi Kontrolü
-
-    Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır.
-
-    - Bir sınıf seçici kullanan bir kural ile üç tür seçici kullanan bir kural arasında hangi kuralın özgünlüğü daha yüksektir? 
-
-    # Ek Kaynaklar
-
-    Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz. (Bağlantı içerikleri ingilizcedir.)
-
-    - [CSS Cascade](https://2019.wattenberger.com/blog/css-cascade), gerçekte hangi CSS kurallarının uygulandığını etkileyen diğer faktörler hakkında biraz daha ayrıntılı bilgi veren harika ve etkileşimli bir makaledir. 
-
-    - [Yazı Tipi Değiştirmek](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#finding-and-loading-a-font-file-from-a-hosted-service), özel yazı tiplerinin kullanımına ilişkin birkaç farklı yaklaşımı anlatır. 
-
-    - Kevin Powell tarafından sunulan [CSS Özgünlüğü Açıklaması](https://www.youtube.com/watch?v=c0kfcP_nD9E) başlıklı içerik, özgünlük örneklerini ele almakta ve özgünlükle başa çıkma konusunda bazı öneriler sunmaktadır. Bu içerik, CSS özgünlüğünü daha iyi anlamak ve onunla başa çıkmak isteyenlere yardımcı olabilir.
-
-    - [CSS Özgünlük Hesaplayıcı seçicilerinizi doldurmanıza ve özgünlüklerinin hesaplanmasına ve görselleştirilmesine olanak tanır.](https://specificity.keegan.st/)
-
-    - [Mozilla CSS Özellikleri Referansı, belirli bir CSS özelliğinin miras alınıp alınmadığını öğrenmek için kullanılabilir; sadece Resmi Tanım bölümündeki "Inherited" alanını arayın.](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index) [İşte CSS renk özelliği için bir örnek.](https://developer.mozilla.org/en-US/docs/Web/CSS/color#formal_definition)
     
-    - [CSS Cascade Hakkında İnteraktif Bir Eğitim (Interactive Scrim).](https://scrimba.com/scrim/c9gwmnAR)
+- Nasıl stil vereceğniz tamamen size kalmış, CSS yöntemini kullanmalısınız. Önceki derste bahsedilen birkaç özelliği kullanmayı deneyin (renk, arka plan rengi, yazı tipi özellikleri vb.). Farklı özellikler denemek ve ne yaptıklarını anlamak için kendinize biraz zaman tanıyın. Şu an için projenizin iyi görünüp görünmemesini düşünmeyin. Şuan sadece alıştırma yapmak ve CSS yazmayı alışkanlık haline getirmeyi hedefleyin. Bu çalışma, portföyünüzde sergilemeniz için yapılan bir çalışma değildir.
+    
+- Özel bir yazı tipini nasul kullancağımızı henüz öğrenmedik, bu nedenle şimdilik kullanabileceğiniz genel fontların listesini bulmak için [CSS Fonts](https://www.w3schools.com/Css/css_font.asp) sayfasına göz atın ve CSS için en iyi ve güvenli fontlar için [CSS Web Safe Fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) sayfasına göz atın. Bu sayfadaki fontlar, her bilgisayar ve cihazda hazır bir şekilde yüklü ve kullanılabilir haldedir. (ancak yine de yedek olarak farklı bir font eklemeyi unutmayın).
+
+# Bilgi Kontrolü
+
+Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır.
+
+- Bir sınıf seçici kullanan bir kural ile üç tür seçici kullanan bir kural arasında hangi kuralın özgünlüğü daha yüksektir? 
+
+# Ek Kaynaklar
+
+Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz. (Bağlantı içerikleri ingilizcedir.)
+
+- [CSS Cascade](https://2019.wattenberger.com/blog/css-cascade), gerçekte hangi CSS kurallarının uygulandığını etkileyen diğer faktörler hakkında biraz daha ayrıntılı bilgi veren harika ve etkileşimli bir makaledir. 
+
+- [Yazı Tipi Değiştirmek](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#finding-and-loading-a-font-file-from-a-hosted-service), özel yazı tiplerinin kullanımına ilişkin birkaç farklı yaklaşımı anlatır. 
+
+- Kevin Powell tarafından sunulan [CSS Özgünlüğü Açıklaması](https://www.youtube.com/watch?v=c0kfcP_nD9E) başlıklı içerik, özgünlük örneklerini ele almakta ve özgünlükle başa çıkma konusunda bazı öneriler sunmaktadır. Bu içerik, CSS özgünlüğünü daha iyi anlamak ve onunla başa çıkmak isteyenlere yardımcı olabilir.
+
+- [CSS Özgünlük Hesaplayıcı seçicilerinizi doldurmanıza ve özgünlüklerinin hesaplanmasına ve görselleştirilmesine olanak tanır.](https://specificity.keegan.st/)
+
+- [Mozilla CSS Özellikleri Referansı, belirli bir CSS özelliğinin miras alınıp alınmadığını öğrenmek için kullanılabilir; sadece Resmi Tanım bölümündeki "Inherited" alanını arayın.](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index) [İşte CSS renk özelliği için bir örnek.](https://developer.mozilla.org/en-US/docs/Web/CSS/color#formal_definition)
+    
+- [CSS Cascade Hakkında İnteraktif Bir Eğitim (Interactive Scrim).](https://scrimba.com/scrim/c9gwmnAR)
 
