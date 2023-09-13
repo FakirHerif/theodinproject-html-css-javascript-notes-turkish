@@ -31,7 +31,7 @@ font-weight = özellik(property)
 
  HTML üzerinde belirli elementleri seçmek ve bu elementlerin görünümüne stil eklemek için kullanılan kurallardır. CSS seçicileri, belirli elementleri hedeflemek ve onlara stil uygulamak için kullanılır. CSS'de kullanılan birden çok seçici vardır.
 
-- **Evrensel Seçici(Universal Selector)**
+# **Evrensel Seçici(Universal Selector)**
 Evrensel seçici her türdeki ögeleri seçecektir, dolayısıyla adı "evrensel"dir ve bunun sözdizimi basit bir yıldız işaretidir. Örneğin:
 ```
 * {
@@ -40,7 +40,7 @@ Evrensel seçici her türdeki ögeleri seçecektir, dolayısıyla adı "evrensel
 ```
 Örnekte gördüğümüz üzere bir **"*"** yıldız işareti kullandık ve bu durumda HTML'imizdeki tüm elementlerimize bu stil uygulanacaktır, yani tüm elementlerimizin rengi mor olacaktır.
 
-- **Tür Seçiciler(Type Selectors)**
+# **Tür Seçiciler(Type Selectors)**
 Bir tür seçici (veya element seçici), verilen element türünün hepsini kapsayacaktır. Örneğin aşağıdaki gibi bir HTML içeriğimiz olsun:
 ```
 <div>Merhaba, Dünya!</div>
@@ -56,7 +56,7 @@ div {
 ```
 Bu durumda **div** etiketine sahip olan tüm ögelerimiz seçilecek ve rengi kırmızı olacaktır. (yani; "Merhaba, Dünya!" / "Tekrar Merhaba!" / "Tamam, görüşürüz." bu 3 ögemizin rengi kırmızı olacaktır. Ancak "Merhaba..." yazımız kırmızı olmayacaktır çünkü bu **p** etiketine sahiptir ve div etiketine sahip değildir.)
 
-- **Sınıf Seçiciler(Class Selectors)**
+# **Sınıf Seçiciler(Class Selectors)**
 Sınıf seçiciler, yalnızca bir HTML elementine yerleştirdiğiniz bir niteliktir. Örneğin; div etiketimize bir class atayalım:
 ```
 <div class="selam">Herkese Merhaba!</div>
@@ -79,7 +79,7 @@ Evet bu örnekte dikkat etmemiz en temel şey; class'ımız olan **"selam"** kel
 ```
 **NOT:** Class atarken büyük ve küçük harflere dikkat etmeliyiz çünkü seçici büyük/küçük harflere duyarlıdır. Ve unutmamamız gereken diğer nokta ise aralarda boşluk kullanmamalıyız. Bunun yerine kelime aralarına **-**(kısa çizgi) kullanabiliriz. Ayrıca türkçe karakterler kullanmamalıyız.
 
-- **Kimlik Seçiciler(ID Selectors)**
+# **Kimlik Seçiciler(ID Selectors)**
 ID seçicilerimiz class seçicilerine benzer yapıya sahiptir. Aralarındaki en önemli fark ise; bir element yalnızca bir id'ye(kimliğe) sahip olabilir. Ve Class için **"*"**(yıldız) kullanırken ID için ise **"#"** kullanıyoruz.
 ```
 <div id="baslik">Bu bir başlıktır.</div>
@@ -92,7 +92,7 @@ ID seçicilerimiz class seçicilerine benzer yapıya sahiptir. Aralarındaki en 
 ```
 Evet burada id nin nasıl oluşturulduğunu ve css içinde nasıl seçildiğini görmüş olduk. Yine de genellikle class'ların yeterli olduğu durumlarda class'ları kullanmalıyız ve gereğinden fazla id atamamalıyız.
 
-- **Gruplandırma Seçiciler(The Grouping Selectors)**
+# **Gruplandırma Seçiciler(The Grouping Selectors)**
 Peki biraz önce gördüğümüz örnekte iki farklı class'a ait içeriğimizin rengini kırmızı ve mavi yapmıştık, iki farklı süslü parantez açarak ayrı ayrı stil verdik. Peki her iki class'ımızı da kırmızı yapmak istersek bu durumda ne yapmamız gerekecek? Tekrar iki farklı süslü parantez içinde renkleri kırmızı olarak tanımlayabiliriz evet ama yüzlerce class'ımız olduğunu düşünsenize... Bunların hepsi için ayrı ayrı süslü parantez açmak bize bir hayli zaman kaybettirirdi. Bunun yapmanın daha kolay bir yolu var:
 ```
 <div class="selam">Herkese Merhaba!</div>
@@ -107,7 +107,7 @@ Peki biraz önce gördüğümüz örnekte iki farklı class'a ait içeriğimizin
 ```
 İşte bu kadar... class'larımızı yazıp aralarına bir virgül koyarak tek bir süslü parantez içinde yapmak istediğimiz işlemi gerçekleştirebiliriz.
 
-- **Zincirleme Seçiciler(Chaining Selectors)**
+# **Zincirleme Seçiciler(Chaining Selectors)**
 Seçicileri kullanmanın başka bir yolu da onları herhangi bir ayrım yapmadan liste halinde zincirlemektir. Diyelim ki aşağıdaki HTML'e sahibiz: 
 ```
 <div>
@@ -149,7 +149,7 @@ Genel olarak, bir öge aynı anda iki farklı türde olamayacağı için iki tü
 
 Bu nedenle, tür seçicilerini bir araya getirmek yerine, sınıf, kimlik veya diğer özellik seçicileri ile bir araya getirme eğilimindesiniz. Bu şekilde, belirli özelliklere sahip ögeleri hedefleyebilir ve onlara özgün stiller veya davranışlar uygulayabilirsiniz.
 
-- **Torun Birleştirici(Descendant combinator)**
+# **Torun Birleştirici(Descendant combinator)**
 Birleştiriciler (combinators), seçicileri gruplama veya zincirleme yöntemlerinden farklı bir şekilde birleştirmemize izin verir, çünkü seçiciler arasındaki ilişkiyi gösterirler. Toplamda dört tür birleştirici bulunur, ancak şu anda size yalnızca "descendant combinator" (torun birleştirici) olarak adlandırılanı göstereceğiz. Bu birleştirici, CSS'de seçiciler arasında bir boşluk bırakarak temsil edilir. Bir torun birleştiricisi, son seçiciyle eşleşen ögeleri yalnızca önceki seçiciyle eşleşen bir üst ögesi (parent, grandparent, vb.) olan ögeleri seçmek için kullanır.
 
 Örneğin, .ancestor .child gibi bir ifade, "child" sınıfına sahip bir ögeyi yalnızca "ancestor" sınıfına sahip bir üst ögeye sahipse seçer. Başka bir deyişle, "child", ne kadar derin olursa olsun, "ancestor" ögesinin içine gömülü ise seçilir. Aşağıdaki örneğe bakarak verilen CSS kuralına dayanarak hangi ögelerin seçileceğini belirleyebilir misiniz?
@@ -176,7 +176,7 @@ Gerçekte bir kurala ekleyebileceğiniz birleştirici sayısına bir sınırlama
 
 Özetle, birleştiriciler, bir ögenin başka bir öge ile olan ilişkisini belirtmek için kullanılır ve birçok kombinatörü bir arada kullanmak, kodun karmaşıklığını artırabilir ve özgüllük sorunlarına yol açabilir. Bu nedenle, ihtiyacınıza uygun şekilde kullanmalısınız.
 
-- **Başlangıç için kullanabileceğiniz CSS özellikler**
+# **Başlangıç için kullanabileceğiniz Bazı CSS özellikleri**
 Başlangıçta sıkça kullanacağınız veya en azından sık kullanacağınız bazı CSS özellikleri bulunmaktadır. Aşağıda, sizi başlatmak için kullanışlı olabilecek bazı özellikleri tanıtacağım. Ancak bu liste tamamen kapsamlı değildir. Aşağıdaki özellikleri öğrenmek, başlamanıza yardımcı olmak için yeterli olacaktır:
 
 - **color:** Metin ve arka plan renklerini belirlemek için kullanılır. Örneğin: color: red; veya background-color: #FFFFFF;. (ayrıca; color: rgb(100, 0, 127); ve color: hsl(15, 82%, 56%); )
@@ -213,7 +213,7 @@ Bu özellikler, temel CSS kuralları oluştururken ve web sayfalarınızı still
 
 Evet HTML dosyamıza nasıl CSS stillerini ekleyeceğinizi merak ediyor olabilirsiniz. CSS'in bazı temel özelliklerini öğrendiğimize göre artık bunu nasıl yapabileceğimizi öğrenebiliriz. Bunu yapmanın üç yöntemi vardır.
 
-- **Harici Bir CSS Dosyası Oluşturma**
+# **Harici Bir CSS Dosyası Oluşturma**
 Bu yöntem karşılaşacağınız en yaygın yöntemdir ve CSS için ayrı bir dosya oluşturmayı ve bunu HTML'nin açılış ve kapanış bölümlerinin içine bağlamayı içerir. HTML dosyamızda bulunan **head** etiketleri arasında bir **link** etiketi oluşturarak başlıyoruz:
 ```
 <!-- index.html -->
@@ -246,7 +246,7 @@ Bu yöntemin bazı avantajları şunlardır:
 - HTML ve CSS'yi ayrı tutar, bu da HTML dosyasının daha küçük olmasını ve daha düzenli görünmesini sağlar.
 - CSS'yi sadece bir yerde düzenlemenizi sağlar, bu özellikle benzer stilleri paylaşan birçok sayfaya sahip web siteleri için çok kullanışlıdır.
 
-- **CSS Stillerini HTML Dosyası İçine Dahil Etmek**
+# **CSS Stillerini HTML Dosyası İçine Dahil Etmek**
 CSS kodunu tamamen ayrı bir dosya oluşturmak yerine HTML dosyasının içine eklemeyi içerir. Dahili yöntemde, tüm kuralları bir çift açılış ve kapanış **"style"** etiketi içine koyarsınız ve bu etiketler daha sonra HTML dosyanızın açılış ve kapanış **"head"** etiketleri içine yerleştirilir. Stiller doğrudan **"head"** etiketleri içine yerleştirildiği için, dışsal yöntemde gereken **"link"** öğesine artık ihtiyacımız yoktur.
 
 Bu farklar haricinde, sözdizimi tamamen farklı bir css dosyası oluşturma yöntemiyle aynıdır (seçici, süslü parantezler, bildirimler):
@@ -270,7 +270,7 @@ Bu farklar haricinde, sözdizimi tamamen farklı bir css dosyası oluşturma yö
 </body>
 ```
 
-- **CSS'i Etiketler İçinde Kullanmak**
+# **CSS'i Etiketler İçinde Kullanmak**
 Bu yöntem stil kodlarını doğrudan HTML etiketlerine eklemeyi mümkün kılar, ancak bu yöntem genellikle önerilmez:
 ```
 <body>
