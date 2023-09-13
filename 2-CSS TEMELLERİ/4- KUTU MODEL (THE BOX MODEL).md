@@ -22,10 +22,10 @@ Bir web sayfasındaki her şey dikdörtgen bir kutudur. Bu kutuların içinde ba
   border: 2px solid red;
 }
 ```
-[Örnek Resim İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/boxes.png)
+![Örnek Resim İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/boxes.png)
 
 İsterseniz [bu sayfaya](https://www.theodinproject.com/lessons/foundations-the-box-model) denetçi ile border ekleyerek inceleyebilirsiniz.
-[Örnek Resim İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/odin-lined.png)
+![Örnek Resim İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/odin-lined.png)
 
 Evet, yukarıdaki görüntüde bazı daireler olabilir... ancak düzenleme konusunda, bu daireler dikdörtgen kutular gibi bir araya gelir. Sonunda, bir web sayfasını düzenlemek ve tüm öğelerini konumlandırmak, bu kutuları nasıl iç içe yerleştireceğinizi ve istifleyeceğinizi belirlemektir.
 
@@ -37,7 +37,7 @@ Bu kutuların boyutunu ve aralarındaki boşluğu artırmak için birçok yol bu
 
 Lütfen örnek resimdeki şemayı dikkatlice inceleyin. Bu kavramı iyi anlamak, web tasarımında öğeleri düzgün bir şekilde yerleştirmenin anahtarıdır.
 
-[Örnek Resim İçin Tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/box-model.png)
+![Örnek Resim İçin Tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/main/foundations/html_css/css-foundations/the-box-model/imgs/box-model.png)
 
 # Görev
 

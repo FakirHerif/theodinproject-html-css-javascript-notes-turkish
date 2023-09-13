@@ -21,11 +21,11 @@ Denetçiyi açmak için bir web sayfasının herhangi bir yerine sağ tıklayıp
 
 Öğeler bölmesinde sayfanızın HTML yapısının tamamını görebilirsiniz. Belirli bir öğeyi seçmek için bu bölmedeki öğelerden herhangi birine tıklayabilirsiniz. Alternatif olarak, aşağıda solda gösterilen maviyle vurgulanmış simgeye tıklayabilir ve sayfadaki herhangi bir öğenin üzerine gelebilirsiniz. 
 
-[Resim İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/594984d7c9f9e744577f19ea475b3864e8cc7c91/html_css/v2/foundations/inspecting-html-and-css/imgs/01.png)
+![Görsel İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/594984d7c9f9e744577f19ea475b3864e8cc7c91/html_css/v2/foundations/inspecting-html-and-css/imgs/01.png)
 
 Bir öğe seçildiğinde, Stiller sekmesi, geçerli olarak uygulanan tüm stillerin yanı sıra üzerine yazılan tüm stilleri (metnin üstü çizili olarak gösterilir) gösterir. Örneğin, [The Odin Project ana sayfasındaki](https://www.theodinproject.com/) "Web Geliştirmede Kariyeriniz Burada Başlıyor/Your Career in Web Development Starts Here" başlığına tıklamak için denetçiyi kullanırsanız, aşağıda görüldüğü gibi sağ tarafta, o anda öğeyi etkileyen tüm stilleri göreceksiniz:
 
-[Resim İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/f8fd38fc62578d8e8368f5303126215a492847f0/foundations/html_css/inspecting-html-and-css/imgs/03.png)
+![Görsel İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/f8fd38fc62578d8e8368f5303126215a492847f0/foundations/html_css/inspecting-html-and-css/imgs/03.png)
 
 # Denetçide Stilleri Test Etmek
 

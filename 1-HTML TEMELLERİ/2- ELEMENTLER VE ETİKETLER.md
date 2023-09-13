@@ -19,7 +19,8 @@ Bu bir paragraftır. = Yazısı açılış ve kapanış etiketlerinin içine al�
 
 ```
 
-Paragraf etiketi haricinde bir çok etiket bulunmaktadır. [Görsel İçin Tıklayınız](https://i.ibb.co/68kJr16/html-tags.jpg)
+Paragraf etiketi haricinde bir çok etiket bulunmaktadır. 
+![Görsel İçin Tıklayınız](https://i.ibb.co/68kJr16/html-tags.jpg)
 Ayrıca bazı kapanış etiketi olmayan HTML ögeleri de vardır. Örneğin:
 ```
 <br> veya 
