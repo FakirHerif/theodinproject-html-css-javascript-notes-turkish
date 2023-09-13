@@ -70,7 +70,7 @@ Bir öğe, display: flex özelliğine sahip bir flex konteyneri içinde bulunuyo
 [Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/04.png)
 
 Yani herhangi bir öğe hem bir flex konteyneri hem de bir flex öğesi olabilir ve bu sayede esnek bir düzen oluşturmak için iç içe geçmiş flex konteynerleri ve flex öğeleri oluşturabilirsiniz. Bu, esnek ve karmaşık düzenler oluşturmak için oldukça güçlü bir araçtır.
-(https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/05.png)
+![Bu kavramın görselini görmek için tıklayın](https://cdn.statically.io/gh/TheOdinProject/curriculum/495704c6eb6bf33bc927534f231533a82b27b2ac/html_css/v2/foundations/flexbox/imgs/05.png)
 
 # Bilgi Kontrolü
 
