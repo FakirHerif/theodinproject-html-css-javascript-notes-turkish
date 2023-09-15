@@ -23,7 +23,7 @@ div.bold-text {
 div.bold-text = seçici(selector)
 font-weight = özellik(property)
 700 = değer(value)
-[Görsel İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg)
+![Görsel İçin Tıklayınız](https://cdn.statically.io/gh/TheOdinProject/curriculum/05ce472eabf8e04eeb2cc9139e66db884074fd7d/foundations/html_css/css-foundations/imgs/00.jpg)
 
 **Not:** **"div"** etiketi HTML'in temel etiketlerinden biridir. Bu sadece boş bir kapsayıcıdır. Genel olarak "h1" veya "p" gibi etiketleri kullanmak daha iyidir ancak CSS hakkında daha fazla bilgiye sahip oldukça oluşturduğumuz etiketlerin bazı durumlarda bir kapsayıcıya ihtiyacı olduğunu göreceksiniz. Yani div etiketi ile diğer etiketlerimizi saracağız. Bunun ne zaman ve ne nedenle kullanılacağı konusunda ilerleyen derslerde daha derinlemesine bilgi verilecektir.
 
