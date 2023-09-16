@@ -42,3 +42,45 @@ Ayrıca, The Odin Project'in discord kanalına katılarak diğer insanlardan yar
 
 # Görev
 
+- Projenizde ilerlerken bol bol commit atmayı unutmayın. Nasıl yapılacağını hatırlamıyorsanız [bu linke](https://www.theodinproject.com/lessons/foundations-commit-messages) tıklayabilirsiniz.
+
+- Projeniz için tasarım görsellerini burada bulabilirsiniz. İncelemek için linklere tıklayın.
+    - [Birinci Görsel/Tam Tasarım](https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/01.png)
+    - [İkinci Görsel/Renkler ve Yazı Tipleri](https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/02.png)
+    - Görsellerdeki yazı tipi roboto'dur.
+
+- Bunun gibi bir projeyi tamamlamanın birçok yolu vardır. Boş bir HTML dosyası oluşturup nereden başlayacağınızı bilmemek biraz can sıkıcı olabilir. Önerimiz: Her seferinde bir bölüm ele alın. Oluşturacağınız bu projede 4 ana bölüm ve bir alt bilgi bölümü mevcuttur. Önce dilediğiniz bölümü ele alın ve onu güzel bir şekle sokmaya çalışın. 
+
+- Üzerinde çalıştığınız bölümü öncelikle sayfanıza aktarın. Yani, öncelikle HTML kısmını halledin ve ardından CSS stili oluşturun. Çünkü stil vermeye başladığınız zaman HTML'e dönmeniz gerekecek. Karışık bir şekilde ilerlemeye çalışmak çok zamanınızı alacak ve hayal kırıklığına neden olacaktır. Bu proje için yalnızda 1 adet CSS dosyası oluşturup kullanmanız yeterlidir.
+
+- Bu projedeki ögelerin çoğu Flexbox konularında gördüklerinize benzer yapıdadır. Bilgilerinizi tazelemeye ihtiyaç duyarsanız bu konulara dönmekten ve göz atmaktan çekinmeyin.
+
+- Projenizin mobil cihazlarda güzel görünmesi konusunda endişelenmeyin. Bunu daha sonra öğreneceğiz.
+
+- Projenizi bitirdiğiniz zaman bunu Github'a yüklemeyi unutmayın!
+
+# Projenizi Web Üzerinde Görüntüleme
+
+Projenizi başkalarına göstermek veya başkalarından çözüm önerileri almak istiyorsanız, başkalarının sayfanıza yalnızca yerel makinenizden değil de web üzerinden erişebilmesi için sitenizi canlı olarak yayınlamanız gerekecektir. Bu durumda Github'da bunu yapmak inanılmaz derecede basittir.
+
+GitHub, web projelerini doğrudan GitHub deposundan yayınlamanıza olanak tanır. Projenize erişmek için bu linki kullanabilirsiniz: **github-kullanıcı-adınız.github.io/github-repo-adınız**
+
+Projenizi yayınlamanın birkaç yolu vardır, ancak en basit olanı şudur: 
+
+- Projenizin ana HTML dosyasının index.html olarak adlandırıldığından emin olun. Eğer bu şekilde adlandırmadıysanız yeniden adlandırmanız gerekir.
+
+- GitHub deponuza gidin ve aşağıdaki ekran görüntüsünde gösterildiği gibi **Ayarlar(Settings)** düğmesine tıklayın.
+
+![Görsel](https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/03.png)
+
+- Soldaki kenar çubuğunda bulunan **Sayfalar'a(Pages)** tıklayın.
+
+- Branch'inizi **Main** olarak değiştirin ve kaydedin.
+
+- Bu işlem birkaç dakika sürebilir (GitHub 10 dakikaya kadar sürebileceğini söylüyor.) **github-kullanıcı-adınız.github.io/github-repo-adınız** bu linke gittiğiniz zaman projeniz web üzerinden görüntülenebilir olmalıdır. (Linke kendi kullanıcı adınız ve repo adınızı yazmayı unutmayın.)
+
+# ÖNEMLİ NOT
+
+Flexbox Temelleri klasörü altında bulunan "TAMAMLANMIŞ PROJE" klasörü içerisinde bu projenin bitmiş hali yer almaktadır. Kendi projenizle karşılaştırabilir ve bitmiş projeyi inceleyebilirsiniz. 
+
+(Lütfen TAMAMLANMIŞ PROJEYİ projenizi bitirdikten sonra inceleyin. Takıldığınız yerlerde bitmiş projeyi baz alıp hazır kodları kullanmayın. Öğrenebilmek ve ilerleyebilmek için takıldığınız yerleri araştırarak bulmalı ve çözümler üretmelisiniz.)
