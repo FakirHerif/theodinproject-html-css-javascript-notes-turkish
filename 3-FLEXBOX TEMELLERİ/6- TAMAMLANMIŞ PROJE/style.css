@@ -108,8 +108,25 @@
 /* Üçüncü Bölüm */
 .ucuncu {
     background-color: #E5E7EB;
+    padding: 100px 650px 100px;
+
 }
 
+.ucuncu p {
+    font-size: 36px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1F2937;
+    font-style: italic;
+}
+
+.lorem {
+    text-align: center;
+}
+
+.owner {
+    text-align: right;
+    padding-right: 50px;
+}
 /* Dördüncü Bölüm */
 .dorduncu {
     background-color: white;
