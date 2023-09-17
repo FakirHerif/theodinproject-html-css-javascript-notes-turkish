@@ -1,0 +1,35 @@
+.navbar{
+    background-color: #1F2937;
+    color: #fff;
+}
+
+.liste{
+    text-align: right;
+    padding: 10px;
+    padding-bottom: 40px;
+    padding-right: 200px;
+}
+
+.birinci{
+    background-color: #1F2937;
+}
+
+.ikinci{
+    background-color: white;
+}
+
+.ucuncu{
+    background-color: #E5E7EB;
+}
+
+.dorduncu{
+    background-color: white;
+}
+
+.dorduncuickisim{
+    background-color: #3882F6;
+}
+
+.besinci{
+    background-color: #1F2937
+}
