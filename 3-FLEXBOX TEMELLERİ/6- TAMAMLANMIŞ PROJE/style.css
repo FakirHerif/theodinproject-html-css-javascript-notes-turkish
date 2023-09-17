@@ -8,18 +8,17 @@
 }
 
 .logoimg {
-    width: 100px;
-    height: 100px;
+    width: 350px;
+    height: 120px;
     color: #f9faf8;
     text-decoration: none;
     font-size: 24px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 800;
-    padding-top: 10px;
 }
 
 .liste {
-    padding-top: 30px;
+    padding-top: 25px;
 }
 
 .liste a {
@@ -37,13 +36,13 @@
 /* Birinci Bölüm */
 .birinci {
     background-color: #1F2937;
-    padding: 70px 500px 10px 500px;
+    padding: 30px 500px 30px 500px;
     display: flex;
     justify-content: space-between;
 }
 
 .maintext {
-    font-size: 48px;
+    font-size: 68px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #F9FAF8;
     font-weight: 800;
@@ -52,7 +51,7 @@
 }
 
 .secondtext {
-    font-size: 18px;
+    font-size: 28px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #E5E7EB;
     margin-top: 10px;
@@ -63,22 +62,27 @@
     color: #E5E7EB;
     border-radius: 10px;
     padding: 7px 21px;
-    font-size: 18px;
+    font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: 2px solid #3882F6;
 }
 
 .mainimg {
-    width: 350px;
-    height: 300px;
-    margin-right: 70px;
+    width: 550px;
+    height: 350px;
     border-radius: 10px;
+    border: 8px solid white;
+    transition: transform 0.2s;
+}
+
+.mainimg:hover {
+    transform: scale(1.05);
 }
 
 /* İkinci Bölüm */
 .ikinci {
     background-color: white;
-    padding: 0 500px 10px;
+    padding: 0 500px 30px 500px;
 }
 
 .ikinci p {
@@ -166,4 +170,37 @@
 /* Beşinci Bölüm */
 .besinci {
     background-color: #1F2937;
+    padding: 20px 650px 20px;
+}
+
+.besinci p {
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #E5E7EB;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #1E40AF;
+    color: white;
+}
+
+button:active {
+    background-color: #1E40AF;
+    transform: scale(0.95); 
+}
+
+.sosyalmedya {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.sosyalmedya:hover {
+    transform: scale(1.1);
+}
+
+.sosyalmedya:active {
+    transform: scale(0.9);
+    opacity: 0.8;
 }
