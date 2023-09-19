@@ -94,7 +94,7 @@ Biraz önce bundan bahsetmiştik, ancak tekrar belirtmekte fayda var: let ve con
 
 Sayılar programlama mantığının yapı taşlarıdır! Aslında, en azından temel matematik bilgisi içermeyen herhangi bir programlamayı düşünmek zordur… dolayısıyla sayıların nasıl çalıştığını bilmek elbette oldukça önemlidir. Aynı zamanda oldukça basittir.
 
-- W3Schools'da yer alan [sayılar dersinden](https://www.w3schools.com/js/js_numbers.asp) sonra gelen [bu aritmetik operatörler dersi](https://www.w3schools.com/js/js_arithmetic.asp), JavaScript'te sayılarla neler başarabileceğinize dair iyi bir giriş niteliğindedir.
+- W3Schools'da yer alan [sayılar dersi](https://www.w3schools.com/js/js_numbers.asp) ve [bu aritmetik operatörler dersi](https://www.w3schools.com/js/js_arithmetic.asp), JavaScript'te sayılarla neler başarabileceğinize dair iyi bir giriş niteliğindedir.
 
 - [Bu MDN makalesi](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math) aynı bilgiyi biraz farklı bir bakış açısıyla ele alırken, aynı zamanda bazı temel matematiğin JavaScript'te nasıl uygulanacağını da öğretiyor.  Sayılarla yapabileceğiniz çok daha fazlası var, ancak şu anda ihtiyacınız olan tek şey bu.
 
