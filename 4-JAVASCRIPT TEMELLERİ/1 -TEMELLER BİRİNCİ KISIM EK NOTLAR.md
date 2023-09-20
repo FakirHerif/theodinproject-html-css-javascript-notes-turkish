@@ -2,6 +2,83 @@
 
 Bu bölümde the odin project notlarından bağımsız, şahsi olarak oluşturduğum notlar yer almaktadır.
 
+# Değişkenler
+
+Genellikle bir JavaScript uygulaması bilgiyle çalışması gereken bir yapıya sahiptir. İşte iki örnek:
+- Bir çevrimiçi mağaza - bilgiler, satılan ürünler ve bir alışveriş sepeti gibi şeyleri içerebilir.
+- Bir sohbet uygulaması - bilgiler, kullanıcılar, mesajlar ve çok daha fazlasını içerebilir.
+
+Değişkenler, bu tür bilgileri saklamak için kullanılır. Kısaca değişkenler, veriler için isimlendirilmiş bir depolama alanıdır. Js'de genellikle let ve const kullanılır. ikisinin arasında ki farkı notları okumaya devam ettikçe anlayacaksınız. (daha önceden var kullanılıyordu, ancak şuan çok fazla kullanılmıyor, bunu da açıklayacağım.)
+
+Örnek
+```
+let message;            // message adında bir değişken oluşturduk ve buna herhangi bir değer atamadık
+
+message = "Hello!";     // "Hello!" değerini atadık
+
+console.log(message);   // "Hello!" çıktısını verecek.
+```
+
+Kısa ve öz bir halde değişkeni tek bir satırda tanımlayıp değer atayabiliriz.
+Örnek
+```
+let message = 'Hello!';   // değişkeni oluşturduk ve 'Hello!' değerini atadık.
+
+console.log(message);     // 'Hello!' çıktısını verecek.
+```
+
+Ayrıca tek satırda birden fazla değişken tanımlayabiliriz
+Örnek
+```
+let user = 'John', age = 25, message = 'Hello';
+```
+Bu daha kısa görünebilir, ancak bunu önermiyoruz. Daha iyi okunabilirlik adına lütfen değişken başına tek bir satır kullanın.
+
+Çok satırlı varyant biraz daha uzundur ancak okunması daha kolaydır: 
+```
+let user = 'John';
+let age = 25;
+let message = 'Hello';
+```
+
+Bazı kişiler bu çok satırlı tarzda birden fazla değişken de tanımlar: 
+```
+let user = 'John',
+  age = 25,
+  message = 'Hello';
+```
+veya virgül kullanımı ile:
+```
+let user = 'John'
+  , age = 25
+  , message = 'Hello';
+```
+Teknik olarak tüm bu varyantlar aynı şeyi yapar. Yani kişisel zevk ve estetik meselesi. 
+
+Daha eski komut dosyalarında başka bir anahtar kelime de bulabilirsiniz: "var"
+Örnek
+```
+var message = 'Hello';
+```
+var anahtar kelimesi let ile neredeyse aynıdır. Ancak var "eski usul" bir şekilde değişken bildirir. Aralarında ince farklar var ama bunların bizim için henüz bir önemi yok. Js'ye yeni başlayanlar olarak "let" kullanacağız.
+
+- Değişkenler için gerçekten hayattan bir benzetme yapalım.
+“Değişken” kavramını, üzerinde benzersiz isim taşıyan bir çıkartma bulunan, veriler için bir “kutu” olarak hayal edersek, kolaylıkla kavrayabiliriz. 
+
+Örneğin, kutuya message ve içindeki değere "Hello!" diyebiliriz.
+![Görsel](https://javascript.info/article/variables/variable.svg)
+
+ve kutuya herhangi bir değer atayabiliriz. Ayrıca bunu istediğimiz kadar değiştirebiliriz: 
+```
+let message;
+
+message = 'Hello!';
+
+message = 'World!';     // değer değişti.
+
+console.log(message);   // 'World!' çıktısını verir
+```
+
 # Operatörler
 
 Farklı türde JavaScript operatörleri vardır:
@@ -28,6 +105,76 @@ let a = 10;         // a'ya 10 sayı değerini atar.
 let b = "15";       // b'ye "15" string değerini atar.
 let c = a + b;      // c'ye a+b string birleştirme değerini atar.
 ```
+
+Değer değiştirildiğinde eski veriler değişkenden kaldırılır:
+![Görsel](https://javascript.info/article/variables/variable-change.svg)
+
+Ayrıca iki değişken tanımlayabilir ve değerleri birinden diğerine kopyalayabiliriz.
+```
+let hello = 'Hello world!';
+let message;
+
+message = hello;    //hello'dan 'Hello world!' ü message değişkenine kopyaladık.
+
+// şimdi iki değişken aynı veriyi tutuyor:
+alert(hello);       // Hello world!     
+alert(message);     // Hello world!
+```
+
+**Not:** Bir değişken yalnızca bir kez bildirilmelidir. Aynı değişkenin tekrarlanan bildirimi bir hataya yol açar:
+```
+let message = "This";
+let message = "That";   // SyntaxError: 'message' has already been declared
+```
+
+Değişken isimleri yalnızca harf, rakam veya simgelerden($ ve _) oluşmalıdır. Ayrıca ilk harf/karakter rakam olmamalıdır. Birden fazla kelime içerenler için genellikle camelCase kullanılır.
+Örnek:
+```
+let $ = 1;            // bu isimlendirme geçerlidir
+let _ = 2;            // bu isimlendirme geçerlidir
+
+console.log($ + _);   // 3 çıktısını verir
+
+let test123;          // bu isimlendirme geçerlidir
+
+let 1a;               // bu isimlendirme geçersizdir(rakamla başlayamaz)
+let my-name;          // bu isimlendirme geçersizdir(kısa çizgi kullanılamaz)
+```
+
+CamelCase, birden çok kelimenin birleştirildiği bir yazım stili veya isimlendirme kuralıdır. Bu stilde kelimeler arasına boşluk veya diğer ayırıcı karakterler yerine her kelimenin baş harfi büyük yazılır ve kelimeler arasına boşluk eklenmez. Örneğin, "camelCase" veya "myVariableName" gibi ifadeler CamelCase stiline örnek olarak verilebilir. Bu yazım stili genellikle programlama dillerinde değişken isimlendirmesi veya fonksiyon adları gibi yerlerde kullanılır.
+Örnek
+```
+let userName;     // camelCase kullanımı, bu isimlendirme geçerlidir
+```
+
+**Not:** Değişken isimlendirirken dikkat etmemiz gereken diğer önemli husus ise büyük küçük harf kullanımıdır. Örneğin;
+"apple" ve "APPLE" iki farklı değişkendir.
+
+Sabit (değişmeyen) bir değişken bildirmek için let yerine **"const"** kullanılır. 
+Örnek
+```
+const myBirthday = '18.04.1982';    // const değişkeni sabitler ve değiştirilemez, bu değişkene yeni değer atanamaz.
+
+myBirthday = '01.01.2001'; // error, can't reassign the constant! (hata verecektir.)
+```
+
+**Not:** Hatırlanması zor sabit değişkenler için isimlendirme yapılırken büyük harfler kullanılması ve iki kelimeden oluşuyorsa arasına _ (alt çizgi) konulması yaygın bir uygulamadır.
+Örnek
+```
+const COLOR_RED = "#F00";
+const COLOR_GREEN = "#0F0";
+const COLOR_BLUE = "#00F";
+const COLOR_ORANGE = "#FF7F00";
+```
+
+# ÖZET
+Değerleri depolamak için değişkenleri kullanarak tanımlayabiliriz. var, let, veya const anahtar kelimelerdir.
+
+- **let:** modern bir değişken bildirimidir.
+- **var:** eski tip bir değişken bildirimidir. Normalde bunu hiç kullanmayız ancak let ile aralarında ince farklar vardır.
+- **const:** let gibidir ancak değişkenin değeri değiştirilemez.
+
+Değişkenler, içlerinde ne olduğunu kolayca anlamamızı sağlayacak şekilde isimlendirilmelidir. 
 
 # Aritmetik Operatörler
 
