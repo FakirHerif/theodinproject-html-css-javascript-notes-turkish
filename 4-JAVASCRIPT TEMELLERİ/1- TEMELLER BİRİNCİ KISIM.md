@@ -131,34 +131,37 @@ Aşağıdaki alıştırmaları yapmayı deneyin ve console.log() kullanmayı unu
 
 Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır.
 
-- Üç farklı değişken tanımlama yöntemini açıklayın.
+- [Üç farklı değişken tanımlama yöntemini açıklayın.](https://www.theodinproject.com/lessons/foundations-fundamentals-part-1#variable-declaration)
 
-- Üç değişken tanımlama yönteminden hangisini kullanmaktan kaçınmalısınız ve neden?
+- [Üç değişken tanımlama yönteminden hangisini kullanmaktan kaçınmalısınız ve neden?](https://www.theodinproject.com/lessons/foundations-fundamentals-part-1#avoid-var)
 
-- Değişkenleri adlandırırken hangi kurallara uymalısınız?
+- [Değişkenleri adlandırırken hangi kurallara uymalısınız?](https://javascript.info/variables#variable-naming)
 
-- Sayıları ve metinleri bir araya getirdiğinizde ne olur?
+- [Sayıları ve metinleri(stringleri) bir araya getirdiğinizde ne olur?](https://javascript.info/operators#string-concatenation-with-binary)
     
-- Modül (%), veya Kalan (%), operatörü nasıl çalışır?
+- [Modül (%) veya kalan operatörü nasıl çalışır?](https://javascript.info/operators#remainder)
     
-- == ve === arasındaki fark nedir?
+- [== ve === arasındaki fark nedir?](https://www.w3schools.com/js/js_numbers.asp)
 
-- Ne zaman 'NaN' sonucu alırsınız?
+- [Ne zaman 'NaN' sonucu alırsınız?](https://www.w3schools.com/js/js_numbers.asp)
 
-- Bir sayıyı nasıl arttırıp azaltırsınız?
+- [Bir sayıyı nasıl arttırıp azaltırsınız?](https://javascript.info/operators#increment-decrement)
 
-- Önek ve sonek arttırma/azaltma operatörleri arasındaki fark nedir?
+- [Önek ve sonek arttırma/azaltma operatörleri arasındaki fark nedir?](https://javascript.info/operators#increment-decrement)
     
-- Operatör önceliği nedir ve JavaScript'te nasıl ele alınır?
+- [Operatör önceliği nedir ve JavaScript'te nasıl ele alınır?](https://javascript.info/operators#operator-precedence)
     
-- Geliştirici araçlarına ve konsola nasıl erişim sağlanır?
+- [Geliştirici araçlarına ve konsola nasıl erişim sağlanır?](https://www.theodinproject.com/lessons/foundations-fundamentals-part-1#access-devTools-console)
     
-- Bilgileri konsolda nasıl görüntülersiniz?
+- [Bilgileri konsolda nasıl görüntülersiniz?](https://www.theodinproject.com/lessons/foundations-fundamentals-part-1#console-log)
 
-- Unary Plus operatörü nedir? Örneğin: +”10” durumunda nasıl bir çıktı alırsınız?
+- [Unary Plus operatörü nedir? Örneğin: +”10” durumunda nasıl bir çıktı alırsınız?](https://javascript.info/operators#numeric-conversion-unary)
 
 # Ek Kaynaklar
 
 Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz. 
 
 - [Eski 'var' başlıklı bu makalede var ve let arasındaki farkları inceleyebilirsiniz.](https://javascript.info/var)
+
+# EKSTRA NOTLAR
+*Bu bölüm içerisinde yer alan tüm konuların ele alındığı, açıklandığı ve anlatıldığı şahsi oluşturduğum ek notları incelemeyi unutmayın !!!*
