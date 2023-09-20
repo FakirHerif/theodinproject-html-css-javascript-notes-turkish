@@ -60,16 +60,20 @@ Alıştırmaları sırayla yapın. Sağ üst kısımda yer alan "Run" butonuna b
 
 Alıştırmalara başlamak için ücretsiz bir replit hesabı oluşturun ve alıştırmalara erişmek için “Fork” veya “Remix”'e tıklayın. Not: Sol sütunda yer alan dosyalara göz atmaktan çekinmeyin.
 
-- Alıştırma 1
+- [Alıştırma 1](https://replit.com/@OdinProject/troubleshooting#troubleshooting.js)
+
 Bu alıştırmada troubleshooting.js adlı dosya üzerinde çalışacaksınız.
 
-- Alıştırma 2
+- [Alıştırma 2](https://replit.com/@OdinProject/enter-a-number#script.js)
+
 script.js üzerinde çalışacaksınız ve çalışmanızı kontrol etmek için 'webview' bölmesindeki konsolu kullanacaksınız. Konsola erişmek için 'webview' bölmesinde adres çubuğunun sağ tarafında bulunan ingiliz anahtarı simgesine tıklayın. 
 
-- Alıştırma 3
+- [Alıştırma 3](https://replit.com/@OdinProject/lets-do-some-math#math.js)
+
 math.js üzerinde çalışacaksınız.
 
-- Alıştırma 4
+- [Alıştırma 4](https://replit.com/@OdinProject/direction-follow#follow.js)
+
 Follow.js üzerinde çalışacaksınız.
 
 # Bilgi Kontrolü
@@ -125,4 +129,4 @@ Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağla
 [Düzenli ifadelerden ne zaman kaçınılmalıdır?](https://softwareengineering.stackexchange.com/questions/113237/when-you-should-not-use-regular-expressions)
 
 # EKSTRA NOTLAR
-*Bu bölüm içerisinde yer alan tüm konuların ele alındığı, açıklandığı ve anlatıldığı şahsi oluşturduğum ek notları incelemeyi unutmayın !!!*
+*JAVASCRIPT TEMELLERİ klasörü/dizini içerisinde yer alan, tüm konuların ele alındığı, açıklandığı ve anlatıldığı şahsi olarak oluşturduğum ek notları incelemeyi unutmayın !!!*
