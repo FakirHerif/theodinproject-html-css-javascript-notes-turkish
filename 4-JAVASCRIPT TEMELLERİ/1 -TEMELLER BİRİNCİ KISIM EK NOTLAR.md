@@ -158,6 +158,79 @@ Değerleri depolamak için değişkenleri kullanarak tanımlayabiliriz. var, let
 
 Değişkenler, içlerinde ne olduğunu kolayca anlamamızı sağlayacak şekilde isimlendirilmelidir. 
 
+# Değişken Türleri
+
+- **String (Dize):** Metin veya metin verilerini temsil eder. Örnek: "Merhaba, dünya!"
+
+```
+let isim = "Ahmet";
+let mesaj = "Merhaba, " + isim + "!";
+console.log(mesaj); // "Merhaba, Ahmet!"
+```
+
+- **Number (Sayı):** Sayısal değerleri temsil eder. Hem tam sayılar hem de ondalık sayılar dahildir. Örnek: 42, 3.14
+
+```
+let yas = 25;
+let pi = 3.14;
+let toplam = yas + pi;
+console.log(toplam); // 28.14
+
+```
+
+- **Boolean (Mantıksal):** Sadece iki değere sahiptir, true (doğru) veya false (yanlış). Koşullu ifadelerde sıkça kullanılır.
+
+```
+let dogruMu = true;
+let yanlisMi = false;
+if (dogruMu) {
+    console.log("Doğru!");
+} else {
+    console.log("Yanlış!");
+}
+```
+
+- **Array (Dizi):** Birden fazla değeri içeren bir veri yapısıdır. Örnek: [1, 2, 3, 4]
+
+```
+let renkler = ["kırmızı", "yeşil", "mavi"];
+console.log(renkler[0]);      // "kırmızı"
+```
+
+- **Object (Nesne):** Anahtar-değer çiftlerini içeren bir veri yapısıdır. Özellikle karmaşık verileri temsil etmek için kullanılır.
+
+```
+let kullanici = {
+    ad: "Mehmet",
+    soyad: "Yılmaz",
+    yas: 30
+};
+console.log(kullanici.ad); // "Mehmet"
+```
+
+- **Undefined (Tanımsız):** Bir değişkenin değeri atanmamışsa veya bir işlev bir değer döndürmezse, bu değer atanır.
+
+```
+let degisken;             // Değer atanmamış
+console.log(degisken);    // undefined
+```
+
+- **Null (Boş):** Bir değişkenin bilinçli olarak boş olduğunu gösterir.
+
+```
+let hicbirsey = null;     // Bilinçli olarak boş
+```
+
+- **Function (Fonksiyon):** Bir işlevi temsil eder. JavaScript'te fonksiyonlar birinci sınıf nesnelerdir ve değişkenlerde saklanabilir veya başka bir işlevin bir parçası olarak kullanılabilirler.
+
+```
+function topla(a, b) {
+    return a + b;
+}
+let sonuc = topla(5, 3);    // Fonksiyonu çağır ve sonucu sakla
+console.log(sonuc);         // 8
+```
+
 # Operatörler
 
 Farklı türde JavaScript operatörleri vardır:
