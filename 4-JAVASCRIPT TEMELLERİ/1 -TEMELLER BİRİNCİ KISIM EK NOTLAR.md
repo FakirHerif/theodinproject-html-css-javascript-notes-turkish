@@ -20,6 +20,7 @@ console.log(message);   // "Hello!" çıktısını verecek.
 ```
 
 Kısa ve öz bir halde değişkeni tek bir satırda tanımlayıp değer atayabiliriz.
+
 Örnek
 ```
 let message = 'Hello!';   // değişkeni oluşturduk ve 'Hello!' değerini atadık.
@@ -28,6 +29,7 @@ console.log(message);     // 'Hello!' çıktısını verecek.
 ```
 
 Ayrıca tek satırda birden fazla değişken tanımlayabiliriz
+
 Örnek
 ```
 let user = 'John', age = 25, message = 'Hello';
@@ -56,6 +58,7 @@ let user = 'John'
 Teknik olarak tüm bu varyantlar aynı şeyi yapar. Yani kişisel zevk ve estetik meselesi. 
 
 Daha eski komut dosyalarında başka bir anahtar kelime de bulabilirsiniz: "var"
+
 Örnek
 ```
 var message = 'Hello';
@@ -66,6 +69,7 @@ var anahtar kelimesi let ile neredeyse aynıdır. Ancak var "eski usul" bir şek
 “Değişken” kavramını, üzerinde benzersiz isim taşıyan bir çıkartma bulunan, veriler için bir “kutu” olarak hayal edersek, kolaylıkla kavrayabiliriz. 
 
 Örneğin, kutuya message ve içindeki değere "Hello!" diyebiliriz.
+
 ![Görsel](https://javascript.info/article/variables/variable.svg)
 
 ve kutuya herhangi bir değer atayabiliriz. Ayrıca bunu istediğimiz kadar değiştirebiliriz: 
@@ -78,6 +82,81 @@ message = 'World!';     // değer değişti.
 
 console.log(message);   // 'World!' çıktısını verir
 ```
+
+Değer değiştirildiğinde eski veriler değişkenden kaldırılır:
+
+![Görsel](https://javascript.info/article/variables/variable-change.svg)
+
+Ayrıca iki değişken tanımlayabilir ve değerleri birinden diğerine kopyalayabiliriz.
+```
+let hello = 'Hello world!';
+let message;
+
+message = hello;    //hello'dan 'Hello world!' ü message değişkenine kopyaladık.
+
+// şimdi iki değişken aynı veriyi tutuyor:
+alert(hello);       // Hello world!     
+alert(message);     // Hello world!
+```
+
+**Not:** Bir değişken yalnızca bir kez bildirilmelidir. Aynı değişkenin tekrarlanan bildirimi bir hataya yol açar:
+```
+let message = "This";
+let message = "That";   // SyntaxError: 'message' has already been declared
+```
+
+Değişken isimleri yalnızca harf, rakam veya simgelerden($ ve _) oluşmalıdır. Ayrıca ilk harf/karakter rakam olmamalıdır. Birden fazla kelime içerenler için genellikle camelCase kullanılır.
+
+Örnek:
+```
+let $ = 1;            // bu isimlendirme geçerlidir
+let _ = 2;            // bu isimlendirme geçerlidir
+
+console.log($ + _);   // 3 çıktısını verir
+
+let test123;          // bu isimlendirme geçerlidir
+
+let 1a;               // bu isimlendirme geçersizdir(rakamla başlayamaz)
+let my-name;          // bu isimlendirme geçersizdir(kısa çizgi kullanılamaz)
+```
+
+CamelCase, birden çok kelimenin birleştirildiği bir yazım stili veya isimlendirme kuralıdır. Bu stilde kelimeler arasına boşluk veya diğer ayırıcı karakterler yerine her kelimenin baş harfi büyük yazılır ve kelimeler arasına boşluk eklenmez. Örneğin, "camelCase" veya "myVariableName" gibi ifadeler CamelCase stiline örnek olarak verilebilir. Bu yazım stili genellikle programlama dillerinde değişken isimlendirmesi veya fonksiyon adları gibi yerlerde kullanılır.
+
+Örnek
+```
+let userName;     // camelCase kullanımı, bu isimlendirme geçerlidir
+```
+
+**Not:** Değişken isimlendirirken dikkat etmemiz gereken diğer önemli husus ise büyük küçük harf kullanımıdır. Örneğin;
+"apple" ve "APPLE" iki farklı değişkendir.
+
+Sabit (değişmeyen) bir değişken bildirmek için let yerine **"const"** kullanılır. 
+
+Örnek
+```
+const myBirthday = '18.04.1982';    // const değişkeni sabitler ve değiştirilemez, bu değişkene yeni değer atanamaz.
+
+myBirthday = '01.01.2001'; // error, can't reassign the constant! (hata verecektir.)
+```
+
+**Not:** Hatırlanması zor sabit değişkenler için isimlendirme yapılırken büyük harfler kullanılması ve iki kelimeden oluşuyorsa arasına _ (alt çizgi) konulması yaygın bir uygulamadır.
+
+Örnek
+```
+const COLOR_RED = "#F00";
+const COLOR_GREEN = "#0F0";
+const COLOR_BLUE = "#00F";
+const COLOR_ORANGE = "#FF7F00";
+```
+
+# ÖZET
+Değerleri depolamak için değişkenleri kullanarak tanımlayabiliriz. var, let, veya const anahtar kelimelerdir.
+
+- **let:** modern bir değişken bildirimidir.
+- **var:** eski tip bir değişken bildirimidir. Normalde bunu hiç kullanmayız ancak let ile aralarında ince farklar vardır.
+- **const:** let gibidir ancak değişkenin değeri değiştirilemez.
+
+Değişkenler, içlerinde ne olduğunu kolayca anlamamızı sağlayacak şekilde isimlendirilmelidir. 
 
 # Operatörler
 
@@ -106,76 +185,6 @@ let b = "15";       // b'ye "15" string değerini atar.
 let c = a + b;      // c'ye a+b string birleştirme değerini atar.
 ```
 
-Değer değiştirildiğinde eski veriler değişkenden kaldırılır:
-![Görsel](https://javascript.info/article/variables/variable-change.svg)
-
-Ayrıca iki değişken tanımlayabilir ve değerleri birinden diğerine kopyalayabiliriz.
-```
-let hello = 'Hello world!';
-let message;
-
-message = hello;    //hello'dan 'Hello world!' ü message değişkenine kopyaladık.
-
-// şimdi iki değişken aynı veriyi tutuyor:
-alert(hello);       // Hello world!     
-alert(message);     // Hello world!
-```
-
-**Not:** Bir değişken yalnızca bir kez bildirilmelidir. Aynı değişkenin tekrarlanan bildirimi bir hataya yol açar:
-```
-let message = "This";
-let message = "That";   // SyntaxError: 'message' has already been declared
-```
-
-Değişken isimleri yalnızca harf, rakam veya simgelerden($ ve _) oluşmalıdır. Ayrıca ilk harf/karakter rakam olmamalıdır. Birden fazla kelime içerenler için genellikle camelCase kullanılır.
-Örnek:
-```
-let $ = 1;            // bu isimlendirme geçerlidir
-let _ = 2;            // bu isimlendirme geçerlidir
-
-console.log($ + _);   // 3 çıktısını verir
-
-let test123;          // bu isimlendirme geçerlidir
-
-let 1a;               // bu isimlendirme geçersizdir(rakamla başlayamaz)
-let my-name;          // bu isimlendirme geçersizdir(kısa çizgi kullanılamaz)
-```
-
-CamelCase, birden çok kelimenin birleştirildiği bir yazım stili veya isimlendirme kuralıdır. Bu stilde kelimeler arasına boşluk veya diğer ayırıcı karakterler yerine her kelimenin baş harfi büyük yazılır ve kelimeler arasına boşluk eklenmez. Örneğin, "camelCase" veya "myVariableName" gibi ifadeler CamelCase stiline örnek olarak verilebilir. Bu yazım stili genellikle programlama dillerinde değişken isimlendirmesi veya fonksiyon adları gibi yerlerde kullanılır.
-Örnek
-```
-let userName;     // camelCase kullanımı, bu isimlendirme geçerlidir
-```
-
-**Not:** Değişken isimlendirirken dikkat etmemiz gereken diğer önemli husus ise büyük küçük harf kullanımıdır. Örneğin;
-"apple" ve "APPLE" iki farklı değişkendir.
-
-Sabit (değişmeyen) bir değişken bildirmek için let yerine **"const"** kullanılır. 
-Örnek
-```
-const myBirthday = '18.04.1982';    // const değişkeni sabitler ve değiştirilemez, bu değişkene yeni değer atanamaz.
-
-myBirthday = '01.01.2001'; // error, can't reassign the constant! (hata verecektir.)
-```
-
-**Not:** Hatırlanması zor sabit değişkenler için isimlendirme yapılırken büyük harfler kullanılması ve iki kelimeden oluşuyorsa arasına _ (alt çizgi) konulması yaygın bir uygulamadır.
-Örnek
-```
-const COLOR_RED = "#F00";
-const COLOR_GREEN = "#0F0";
-const COLOR_BLUE = "#00F";
-const COLOR_ORANGE = "#FF7F00";
-```
-
-# ÖZET
-Değerleri depolamak için değişkenleri kullanarak tanımlayabiliriz. var, let, veya const anahtar kelimelerdir.
-
-- **let:** modern bir değişken bildirimidir.
-- **var:** eski tip bir değişken bildirimidir. Normalde bunu hiç kullanmayız ancak let ile aralarında ince farklar vardır.
-- **const:** let gibidir ancak değişkenin değeri değiştirilemez.
-
-Değişkenler, içlerinde ne olduğunu kolayca anlamamızı sağlayacak şekilde isimlendirilmelidir. 
-
 # Aritmetik Operatörler
 
 Sayılar üzerinde aritmetik işlemler yapamak için kullanılan operatör türledir.
@@ -190,6 +199,7 @@ Sayılar üzerinde aritmetik işlemler yapamak için kullanılan operatör türl
 - "--"  Azaltma
 
 # Toplama (+)
+
 Örnek
 ```
 let x = 5;
@@ -199,6 +209,7 @@ console.log(z);     // 7 çıktısını verir.
 ```
 
 # Çıkarma (-)
+
 Örnek
 ```
 let x = 5;
@@ -208,6 +219,7 @@ console.log(z);     // 3 çıktısını verir.
 ```
 
 # Çarpma (*)
+
 Örnek
 ```
 let x = 5;
@@ -217,6 +229,7 @@ console.log(z);     // 10 çıktısını verir.
 ```
 
 # Bölme (/)
+
 Örnek
 ```
 let x = 5;
@@ -226,6 +239,7 @@ console.log(z);     // 2.5 çıktısını verir.
 ```
 
 # Kalan (%)
+
 Örnek
 ```
 let x = 5;
@@ -235,6 +249,7 @@ console.log(z);     // 1 çıktısını verir.
 ```
 
 # Üs Alma (**)
+
 Örnek
 ```
 let x = 5;
@@ -243,6 +258,7 @@ console.log(z);     // 25 çıktısını verir.
 ```
 
 # Arttırma (++)
+
 Örnek
 ```
 let x = 5;
@@ -252,6 +268,7 @@ console.log(z);     // 6 çıktısını verir
 ```
 
 # Azaltma (--)
+
 Örnek
 ```
 let x = 5;
@@ -299,6 +316,7 @@ console.log(x);     // 15 çıktısını verir.
 ![Görsel](https://i.ibb.co/YhK2mgC/operator.jpg)
 
 Ayrıca js'de string ifadelerde de atama operatörleri kullanılabilir.
+
 Örnek
 ```
 let text1 = "What a very ";
@@ -310,6 +328,7 @@ text1 += "nice day";         // "What a very nice day" çıktısını verir
 Karşılaştırma operatörleri mantıksal ifadelerde değişkenler veya değerler arasındaki eşitliği veya farkı belirlemek için kullanılır.
 
 - **"==" (eşittir):** İki değeri karşılaştırır ve eğer değerler eşitse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -319,6 +338,7 @@ console.log(x==4);      // False çıktısını verir
 ```
 
 - **"===" (tam eşittir):** İki değeri ve türlerini karşılaştırır. Hem değerler hem de türler eşitse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -327,6 +347,7 @@ console.log(x==="5");    // False çıktısını verir
 ```
 
 - **"!=" (eşit değildir):** İki değeri karşılaştırır ve eğer değerler eşit değilse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -334,6 +355,7 @@ console.log(x!=8);       // True çıktısını verir
 ```
     
 - **"!==" (tam eşit değildir):** İki değeri ve türlerini karşılaştırır. Hem değerler hem de türler eşit değilse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -343,6 +365,7 @@ console.log(x!==8);      // True çıktısını verir
 ```
 
 - **">" (büyüktür):** Sol tarafındaki değerin, sağ tarafındaki değerden büyük olup olmadığını kontrol eder. Eğer sol değer sağ değerden büyükse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -350,6 +373,7 @@ console.log(x>10);       // False çıktısını verir
 console.log(x>3);        // True çıktısını verir
 ```
 **Not:** Unutulmaması gereken bir diğer önemli nokta ise eğer string ifadeler için büyüktür(>) veya küçüktür(<) kullanıyorsak bunların sıralaması alfabetiktir.
+
 Örnek:
 ```
 console.log("2" < "12");    // False çıktısını verir
@@ -357,6 +381,7 @@ console.log("2" > "12");    // True çıktısını verir
 ```
 
 - **"<" (küçüktür):** Sol tarafındaki değerin, sağ tarafındaki değerden küçük olup olmadığını kontrol eder. Eğer sol değer sağ değerden küçükse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -365,6 +390,7 @@ console.log(x<10);      // True çıktısını verir
 ```
 
 - **">=" (büyük eşittir):** Sol tarafındaki değerin, sağ tarafındaki değerden büyük veya eşit olup olmadığını kontrol eder. Eğer sol değer sağ değerden büyük veya eşitse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -373,6 +399,7 @@ console.log(x>=5);      // True çıktısını verir
 ```
 
 - **"<=" (küçük eşittir):** Sol tarafındaki değerin, sağ tarafındaki değerden küçük veya eşit olup olmadığını kontrol eder. Eğer sol değer sağ değerden küçük veya eşitse true döner.
+
 Örnek:
 ```
 let x = 5;
@@ -381,6 +408,7 @@ console.log(x<=10);     // True çıktısını verir
 ```
 
 - **"?" (üçlü operatör veya koşullu operatör):** Koşullu bir ifade oluşturmak için kullanılır. Özel bir koşulu kontrol eder ve bu koşula göre iki farklı sonuç döndürebilir. Örneğin: koşul ? değer1 : değer2. Eğer koşul doğruysa değer1, aksi takdirde değer2 döner.
+
 Örnek:
 ```
 let alisverisMiktari = 120;     // Örnek olarak 120 TL alışveriş yapıldığını düşünelim.
@@ -393,6 +421,7 @@ console.log(mesaj);             // 100'den büyük olduğu için "İndirim hakk�
 # Mantıksal Operatörler
 
 - **"&&" (Ve Operatörü):** İki koşulu karşılaştırmak ve her iki koşul da doğru ise sonucu doğru yapar. Örneğin, (x < 10 && y > 1) ifadesi, x 10'dan küçük VE y 1'den büyük olduğunda doğru olur.
+
 Örnek:
 ```
 let x = 6;
@@ -401,6 +430,7 @@ console.log(x<10 && y>1);   // True çıktısını verir.
 ```
 
 - **"||" (Veya Operatörü):** İki koşulu karşılaştırmak ve en az bir koşul doğru ise sonucu doğru yapar. Örneğin, (x == 5 || y == 5) ifadesi, x 5'e EŞİT veya y 5'e EŞİT olduğunda doğru olmaz.
+
 Örnek:
 ```
 let x = 6;
@@ -409,6 +439,7 @@ console.log(x==5 || y==5);   // False çıktısını verir.
 ```
 
 - **"!" (Değil Operatörü):** Bir koşulu tersine çevirir. Örneğin, !(x == y) ifadesi, x ve y birbirine EŞİT OLMADIĞINDA doğru olur.
+
 Örnek:
 ```
 let x = 6;
@@ -492,6 +523,7 @@ console.log(sonuc);         // "3030" değeri döndürecektir.
 Bu örnekte sonucun 102030 olmasını beklemek yaygın bir hatadır. çünkü let sonuc ifadesinde ayrı ayrı üç değer topluyoruz ve bu değerlerden 2 tanesi sayı değeridir, bu sayılar kendi arasında normal bir şekilde toplanacak ve 30 sonucunu verecek ardından let z de string değer ise birleştirme işlemi yapacak ve bu yüzden sonuç olarak 3030 değerini elde edeceğiz.
 
 **String ifadeleri sayısal değere çevirerek toplama**
+
 Örnek 6
 ```
 let x = "74";           // "77" string bir değerdir
@@ -499,12 +531,12 @@ x = Number(x) + 3;      // x string değerini sayısal değere dönüştürüp 3
 console.log(x);         // 77 çıktısını verecektir.
 ```
 Number() ifadesi yerine değerin başına + ekleyerekte string ifadeyi sayıya çevirebiliriz.
+
 Örnek 7
 ```
 let x = "74";           // "77" string bir değerdir
 x = +x + 3;             // x string değerini sayısal değere dönüştürüp 3 ekledik
 console.log(x);         // 77 çıktısını verecektir.
-
 ```
 
 # Sayısal Stringler
