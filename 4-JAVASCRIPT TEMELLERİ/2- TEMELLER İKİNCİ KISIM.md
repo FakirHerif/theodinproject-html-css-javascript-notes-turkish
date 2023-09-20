@@ -112,5 +112,17 @@ Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulun
 
 - [Nesting nedir?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if...else)
 
+# Ek Kaynaklar
+
+Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz.
+
+"Düzenli ifadeler," veya kısaca "regex" olarak bilinen terimler, metinlerdeki belirli desenleri bulmak veya eşleştirmek için kullanılan bir araçtır. Bu, genellikle metin doğrulaması veya belirli metin desenlerini arama gerekliliği olan durumlarda kullanılır.
+
+Örneğin, e-posta adreslerinin geçerli olup olmadığını kontrol etmek için düzenli ifadeler kullanabilirsiniz. Ancak, bu erken bir öğrenme aşamasında karmaşık bir çözüm olabilir ve başka yöntemler de mevcuttur. Özellikle düzenli ifadeler, büyük metinler üzerinde çalışırken yavaş çalışabilen karmaşık işlemlerdir.
+
+["Düzenli İfadeler Öğretici" kaynağı](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD), düzenli ifadeleri daha iyi anlamanıza yardımcı olabilir. Ancak, düzenli ifadeleri öğrenmek başlangıçta karmaşık olabilir ve sadece belirli durumlarda kullanılması gerekebilir. Diğer metin işleme yöntemleri de bulunur ve daha basit çözümler sunabilir.
+
+[Düzenli ifadelerden ne zaman kaçınılmalıdır?](https://softwareengineering.stackexchange.com/questions/113237/when-you-should-not-use-regular-expressions)
+
 # EKSTRA NOTLAR
 *Bu bölüm içerisinde yer alan tüm konuların ele alındığı, açıklandığı ve anlatıldığı şahsi oluşturduğum ek notları incelemeyi unutmayın !!!*
