@@ -534,4 +534,179 @@ const indeks = dize.search("örnek");
 console.log(indeks); // 16
 ```
 
-# Koşullu İfadeler (if, else, else if)
+# Koşullu İfadeler (if, else, else if, switch)
+
+- **if** ifadesi, JavaScript ve birçok programlama dilinde kullanılan bir koşullu ifadedir. "if" ifadesi, belirli bir koşulu kontrol eder ve bu koşul doğru ise belirtilen kod bloğunu çalıştırır. Eğer koşul yanlış ise, kod bloğu atlanır ve program devam eder.
+
+Temel kullanımı şu şekildedir:
+```
+if (koşul) {
+    // Koşul doğruysa burası çalışır.
+}
+```
+
+Burada "koşul" yerine bir mantıksal ifade veya bir değer gelebilir. Eğer "koşul" doğru (true) ise, ifadenin içindeki kod bloğu çalışır.
+
+Örnek
+```
+let sayi = 10;
+
+if (sayi > 5) {
+    console.log("Sayı 5'ten büyük."); // Bu satır çalışır.
+}
+```
+
+- **else** bir "if" ifadesiyle birlikte kullanılan bir programlama terimidir. "if" ifadesi, belirli bir koşulu kontrol eder ve bu koşul doğruysa belirli bir kod bloğunu çalıştırır. Ancak koşul yanlışsa, "else" ifadesi devreye girer.
+
+"else" ifadesi, bir "if" ifadesinin sonunda gelir ve bir alternatif kod bloğunu tanımlar. Eğer "if" ifadesinin koşulu doğru değilse, "else" bloğu çalıştırılır. Böylece program, iki farklı senaryoya sahip olabilir ve hangi kod bloğunun çalışacağı koşula bağlıdır.
+
+Örnek
+```
+let sayi = 3;
+
+if (sayi > 5) {
+    console.log("Sayı 5'ten büyük.");
+} else {
+    console.log("Sayı 5'ten küçük veya eşit."); // Bu satır çalışır.
+}
+```
+
+- **else if** ifadesi, "if-else" ifadesine ek olarak kullanılan bir koşullu ifade yapısıdır. "else if" ifadesi, birden fazla koşulu kontrol etmek için kullanılır. Eğer birinci koşul doğru değilse, ikinci bir koşulu kontrol edebiliriz, ve böylece birden fazla seçenek arasında programın hangi kod bloğunu çalıştıracağını belirleyebiliriz.
+
+İşte "else if" ifadesinin temel yapısı:
+```
+if (koşul1) {
+    // Koşul1 doğruysa bu kod bloğu çalışır
+} else if (koşul2) {
+    // Koşul1 yanlış, koşul2 doğruysa bu kod bloğu çalışır
+} else {
+    // Hiçbir koşul doğru değilse bu kod bloğu çalışır
+}
+```
+
+Örnek
+```
+let sicaklik = 25;
+
+if (sicaklik > 30) {
+    console.log("Hava sıcak.");
+} else if (sicaklik > 20) {
+    console.log("Hava ılık.");
+} else {
+    console.log("Hava soğuk.");
+}
+```
+
+- **switch** ifadesi, birçok farklı koşulun bulunduğu durumlarda, her koşula özel bir eylem gerçekleştirmek için kullanılan bir kontrol yapısıdır. Genellikle çok sayıda if-else if bloğunun yerine daha temiz ve okunabilir kod oluşturmak için kullanılır.
+
+switch ifadesi, bir anahtar (genellikle bir değişken veya ifade) değerini alır ve ardından bu anahtarın her bir durum (case) ile karşılaştırılmasını sağlar. Eşleşen bir durum bulunduğunda, bu duruma özgü kod bloğunu çalıştırır.
+
+Örnek
+```
+let meyve = "elma";
+
+switch (meyve) {
+  case "elma":
+    console.log("Bu bir elma.");
+    break;
+
+  case "muz":
+    console.log("Bu bir muz.");
+    break;
+
+  case "portakal":
+    console.log("Bu bir portakal.");
+    break;
+
+  default:
+    console.log("Bu bir meyve değil.");
+}
+```
+
+Bu örnekte, switch ifadesi meyve değişkenini kontrol ediyor. Eğer meyve değişkeni "elma" ise, "Bu bir elma." mesajını görüntüler. Eğer meyve "muz" ise, "Bu bir muz." mesajını görüntüler. Eğer meyve başka bir şeyse (hiçbir duruma uymazsa), "Bu bir meyve değil." mesajını görüntüler.
+
+switch ifadesi, case ifadeleri eşleşene kadar çalışır ve bir eşleşme bulunduğunda çalışmayı durdurur. break ifadesi ile her case bloğunun sonunda işlemi durdurmak önemlidir; aksi takdirde, bir durumun kodu çalıştıktan sonra diğer durumların kodu da çalışabilir.
+
+Kod bloğunda iki case kullanmanız mümkündür.
+
+Örnek
+```
+const fruit = "elma";
+
+switch (fruit) {
+  case "elma":
+  case "armut":
+    console.log("Elma veya armut seçildi.");
+    break;
+
+  case "muz":
+    console.log("Muz seçildi.");
+    break;
+
+  case "çilek":
+    console.log("Çilek seçildi.");
+    break;
+
+  default:
+    console.log("Geçersiz meyve seçildi.");
+}
+```
+
+Bu örnekte, eğer fruit değişkeni "elma" veya "armut" ise, "Elma veya armut seçildi." mesajı konsola yazdırılır. İki case ifadesi aynı işlemi paylaşır ve her ikisi de aynı çıktıya yol açar, ardından break ifadesi ile sonlanır. Diğer case ifadeleri ise farklı meyve seçeneklerini işler.
+
+- **"?" (üçlü operatör veya koşullu operatör):** Bu ifadeyi temeller birinci kısım ek notlarda incelemiştik ancak tekrar incelemek ve üstünden geçmek faydalı olacaktır.
+
+Bazen bir koşula bağlı olarak bir değişken atamamız gerekir. "Koşullu" veya "üçlü" operatör olarak adlandırılan bu operatör, bunu daha kısa ve daha basit bir şekilde yapmamızı sağlar. 
+
+Operatör soru işaretiyle temsil edilir. Buna "üçlü" denmesinin sebebi, operatörün üç işleneni vardır.
+
+Sözdizimi:
+```
+koşul ? değer1 : değer2
+```
+
+Örnek
+```
+let saat = 15;
+let mesaj = (saat < 12) ? "Günaydın!" : "İyi günler!";
+console.log(mesaj);
+```
+
+Bu kod, saat değişkeninin değerine bağlı olarak "Günaydın!" veya "İyi günler!" mesajını mesaj değişkenine atar ve sonra bu mesajı konsola yazar. Eğer saat 12'den küçükse "Günaydın!", değilse "İyi günler!" mesajı görüntülenir.
+
+# Koşullu İfadelerde Truthy ve Falsy Terimler
+
+JavaScript'te "truthy" ve "falsy" terimleri, bir değerin koşullu bir ifadede true veya false olarak nasıl değerlendirildiğini ifade eder.
+
+- **Truthy (Doğru değerler)** Bir değer, koşullu bir ifade içinde true olarak değerlendirilen bir değerdir. Truthy değerlerin genellikle true olarak kabul edilen değerlerle benzer özellikleri vardır. İşte bazı truthy değer örnekleri:
+
+    - Herhangi bir sayı (0 hariç), örneğin 5, -10, 3.14.
+    - Herhangi bir metin dizisi (boş diziler hariç), örneğin "Merhaba".
+    - Boş olmayan bir nesne (obje).
+    - Boş olmayan bir dizi (array).
+    - true boolean değeri.
+
+Örnek
+```
+if (5) {
+    console.log("Bu ifade truthy bir değeri temsil eder.");
+}
+```
+
+- **Falsy (Yanlış değerler)** Bir değer, koşullu bir ifade içinde false olarak değerlendirilen bir değerdir. Falsy değerler, genellikle false olarak kabul edilen veya değersiz olarak kabul edilen değerlerdir. İşte bazı falsy değer örnekleri:
+
+    - 0 (sıfır)
+    - NaN (Geçerli bir sayısal işleme tabi tutulamayan "Not-a-Number" değeri)
+    - null
+    - undefined
+    - Boş metin dizisi ("" veya '')
+    - false boolean değeri
+
+Örnek
+```
+if (0) {
+    console.log("Bu ifade falsy bir değeri temsil eder.");
+}
+```
+
+Truthy ve falsy değerler, koşullu ifadelerde ve karar yapılarında kullanılarak programların akışını kontrol etmek için önemlidir. Bir değerin truthy veya falsy olması, o değerin koşullu ifadelerde nasıl işleneceğini belirler.
