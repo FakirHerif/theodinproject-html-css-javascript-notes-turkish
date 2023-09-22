@@ -82,6 +82,3 @@ Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulun
 Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz. 
 
 - [Wes Bos'un hazırladığı 30 videodan oluşan JavaScript serisinden "Chrome Geliştirici Araçları'nda Bilinmesi Gereken 14 Püf Nokta" adlı videoyu izleyin.](https://www.youtube.com/watch?v=xkzDaKwinA8)
-
-# EKSTRA NOTLAR
-*Bu bölüm içerisinde yer alan tüm konuların ele alındığı, açıklandığı ve anlatıldığı şahsi oluşturduğum ek notları incelemeyi unutmayın !!!*
