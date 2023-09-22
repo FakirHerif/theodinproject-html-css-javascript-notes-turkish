@@ -83,19 +83,6 @@ showMessage();
 
 Evet gördüğünüz gibi fonksiyonumuzu çağırdık.
 
-# Anonim/İsimsiz Fonksiyonlar (Function Expression)
-
-Anonim veya isimsiz fonksiyonlar, adları olmayan ve genellikle başka bir fonksiyon içinde veya bir değişkene atanmış olarak kullanılan JavaScript fonksiyonlarıdır. İsimsiz fonksiyonlar, ihtiyaca göre dinamik olarak oluşturulabilir ve kullanılabilirler.
-
-Örnek
-```
-const kareHesapla = function(sayi) {
-  return sayi * sayi;
-};
-
-console.log(kareHesapla(5)); // 25
-```
-
 # SCOPE ----- BU KONU ÇOK ÖNEMLİ !!!
 
 Scope, JavaScript ve diğer programlama dillerinde önemli bir kavramdır. Scope, bir değişkenin tanımlandığı ve erişilebildiği alanı ifade eder. JavaScript'te iki tür kapsam bulunur: global kapsam (global scope) ve yerel kapsam (local scope).
