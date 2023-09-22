@@ -46,7 +46,8 @@ Google, aşağıdaki öğreticilerin bazı bölümlerini güncelledi ve bazı ö
 
 Aşağıdaki adımları takip edebilirsiniz:
 
-- [Chrome DevTools Belgeleri'ne](https://developer.chrome.com/docs/devtools/) gidin. Aşağıda yer alan alt bölümler, Geliştirici Araçları'nda kullanacaklarınızın %95'ini kapsar. Aşina olduğunuz kısımları atlayabilirsiniz.
+- [Chrome DevTools Belgeleri'ne](https://developer.chrome.com/docs/devtools/) gidin. Aşağıda yer alan alt bölümler, Geliştirici Araçları'nda kullanacaklarınızın %95'ini kapsar. Aşina olduğunuz kısımları atlayabilirsiniz ve şimdilik odaklanmanız gereken konular bunlardır:
+
     - CSS
         - [CSS'i görüntüleme ve değiştirme](https://developer.chrome.com/docs/devtools/css/)
         - [CSS özellikleri referansı](https://developer.chrome.com/docs/devtools/css/reference/)
