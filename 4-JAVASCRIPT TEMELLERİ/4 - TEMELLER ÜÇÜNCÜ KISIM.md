@@ -54,12 +54,56 @@ Her fonskiyonu yazın ve çıktıyı console.log ile test edin.
 
 - Bir sayı alıp bu sayıyı +7 olarak döndüren add7 adında bir fonksiyon yazın.
 
+CEVAP:
+```
+function add7(sayi) {
+  return sayi + 7;
+}
+
+let rakam = Number(prompt("Sayı giriniz: "));
+
+console.log(add7(rakam));
+```
+
 - multiply adında, 2 sayıyı alıp bunların çarpımını döndüren bir fonksiyon yazınız.
+
+CEVAP:
+```
+function multiply(a, b) {
+  return a * b;
+}
+
+let one = Number(prompt("Birinci sayıyı girin: "));
+let two = Number(prompt("İkinci sayıyı girin: "));
+
+console.log(multiply(one,two));
+```
 
 - Bir dize alan ve bu dizeyi yalnızca ilk harfi büyük olacak şekilde döndüren, capitalize adında bir fonksiyon yazın. Küçük harf, BÜYÜK HARF veya BoTh karakter dizilerini alabildiğinden emin olun.
 
+CEVAP:
+```
+function capitalize(letter) {
+    return (letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase()).toString();
+};
+
+let kelime = prompt("Yalnızca ilk harfinin büyük olmasını istediğiniz kelimeyi girin: ");
+
+console.log(capitalize(kelime));
+```
+
 - Bir dize alan ve bu dizenin en son harfini döndüren, lastLetter adında bir fonksiyon yazın.
     - lastLetter("abcd") "d" değerini döndürmeli.
+
+CEVAP:
+```
+function lastLetter(letter) {
+    return letter.charAt(letter.length - 1)
+};
+
+let kelime = prompt("Son harfinin görüntüleneceği kelime girin: ");
+console.log(lastLetter(kelime));
+```
 
 # Bilgi Kontrolü
 
