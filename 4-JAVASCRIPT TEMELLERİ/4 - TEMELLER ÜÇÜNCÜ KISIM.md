@@ -65,17 +65,17 @@ Her fonskiyonu yazın ve çıktıyı console.log ile test edin.
 
 Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır.
 
-- Fonksiyonlar ne işe yarar?
+- [Fonksiyonlar ne işe yarar?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
     
-- Bir fonskiyonu nasıl çağırırsınız?
+- [Bir fonskiyonu nasıl çağırırsınız?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#invoking_functions)
 
-- Anonim fonksiyonlar nelerdir?
+- [Anonim fonksiyonlar nelerdir?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions_and_arrow_functions)
 
-- Scope nedir?
+- [Scope nedir?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#function_scope_and_conflicts)
 
-- Return değerleri nedir?
+- [Return değerleri nedir?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
 
-- Arrow fonksiyonu nedir?
+- [Arrow fonksiyonu nedir?](https://javascript.info/arrow-functions-basics)
 
 # Ek Kaynaklar
 
