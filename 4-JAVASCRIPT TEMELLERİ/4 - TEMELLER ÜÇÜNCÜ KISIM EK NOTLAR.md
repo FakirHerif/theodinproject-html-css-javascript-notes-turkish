@@ -547,3 +547,371 @@ let islem = (x, y) => {
 console.log( islem(6, 2) ); // 12
 ```
 
+# For Döngüsü
+
+For döngüsü, birçok programlama dilinde sıklıkla kullanılan ve belirli bir işlemi yinelemek için kullanılan bir kontrol yapısıdır. JavaScript dahil birçok programlama dilinde for döngüsü, özellikle bir işlemi belirli bir sayıda tekrar etmek veya bir koleksiyonun (örneğin, bir dizi) her öğesini işlemek için kullanılır.
+
+Bir for döngüsü genellikle üç ana bölümden oluşur:
+
+- **Başlangıç Değerleri (Initialization):** Döngünün başlangıcında bir değişkenin veya sayacın başlangıç değeri atanır. Bu değer genellikle döngüyü kontrol eden bir değişkendir ve döngü bu değeri kullanarak başlar.
+
+- **Koşul (Condition):** Döngü, her tekrarda belirtilen bir koşulu kontrol eder. Koşul doğru (true) olduğu sürece döngü devam eder. Koşul yanlış (false) olduğunda döngü sona erer.
+
+- **İterasyon (Iteration):** Döngü her bir tekrarda bir adım (iteration) yapar. Bu adım genellikle bir değişkenin değerini artırma veya azaltma işlemi içerir. Bu, döngünün kaç kere tekrar edeceğini ve hangi değerler arasında çalışacağını belirler.
+
+Bir for döngüsünün temel yapısı şu şekildedir:
+```
+for (başlangıç; koşul; artış/değişim) {
+  // Yinelemek istediğiniz işlem veya kod bloğu
+}
+```
+
+Örnek
+```
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+Bu örnek, sıfırdan başlayarak beşe kadar (dahil olmamak üzere) sayıları ekrana yazdıracak bir for döngüsüdür. Şimdi bu üç ana bölümü daha ayrıntılı olarak açıklayalım:
+
+- **Başlangıç Değerleri (Initialization):** let i = 0; ifadesiyle başlıyor. Burada i adında bir değişken oluşturuyoruz ve başlangıç değeri olarak sıfır (0) atıyoruz.
+
+- **Koşul (Condition):** i < 5; ifadesi, her tekrarda i değişkeninin 5'ten küçük olduğunu kontrol eder. Bu koşul doğru olduğu sürece döngü devam eder.
+
+- **İterasyon (Iteration):** i++ ifadesi, her bir tekrarda i değişkeninin değerini bir artırır. Bu, döngünün her adımında i değerinin birer birer artmasını sağlar.
+
+Sonuç olarak, bu for döngüsü sıfırdan başlayarak 0, 1, 2, 3 ve 4 sayılarını ekrana yazdıracaktır. i değeri 5 olduğunda koşul yanlış olacak ve döngü sona erecektir.
+
+for döngüleri, programlamada tekrarlanan işlemleri gerçekleştirmek için güçlü bir araçtır ve birçok farklı senaryoda kullanılabilirler.
+
+# While Döngüsü
+
+While döngüsü, belirli bir koşul doğru olduğu sürece bir işlemi yinelemek için kullanılan bir kontrol yapısıdır. for döngüsü gibi, while döngüsü de tekrarlayan görevleri gerçekleştirmek için kullanılır, ancak kullanımı farklıdır.
+
+Bir while döngüsünün temel yapısı şu şekildedir:
+```
+while (koşul) {
+  // Yinelemek istediğiniz işlem veya kod bloğu
+}
+```
+
+while döngüsü, şu şekilde çalışır:
+
+- İlk adımda, while anahtar kelimesinin hemen ardından gelen koşul ifadesi değerlendirilir. Eğer bu koşul doğru (true) ise, döngü çalışır. Eğer koşul yanlış (false) ise, döngü hiç çalışmaz ve atlar.
+
+- Eğer koşul doğruysa, döngü içindeki kod bloğu çalıştırılır. Bu kod bloğu, belirli bir işlemi gerçekleştirmek için kullanılır.
+
+- Daha sonra, tekrar başa dönülür ve koşul tekrar kontrol edilir. Eğer koşul hala doğru ise, döngü bir kez daha çalıştırılır ve bu işlem koşul yanlış olana kadar devam eder.
+
+while döngüsünün önemli bir özelliği, başlangıçta koşul yanlışsa döngünün hiç çalışmamasıdır. Bu nedenle, koşulu baştan itibaren doğru yapmak veya döngü içinde bir yerde koşulu yanlış hale getirmek (örneğin, koşul = false;) döngünün çalışmasını engelleyebilir.
+
+Örnek
+```
+let sayac = 0;
+
+while (sayac < 5) {
+  console.log("Merhaba");
+  sayac++;
+}
+```
+
+Bu while döngüsü, sayac değeri 5 olana kadar "Merhaba" yazdırmaya devam edecektir. Her adımda sayac bir artırılır ve koşul yanlış hale geldiğinde döngü sona erer.
+
+while döngüleri, belirli bir koşul altında sürekli olarak tekrarlanması gereken işlemler için kullanışlıdır. Ancak dikkatli olunmalıdır, çünkü eğer koşul hiçbir zaman yanlış hale gelmezse, döngü sonsuz bir döngüye dönüşebilir ve programın kilitlenmesine neden olabilir.
+
+# Do...While Döngüsü
+
+do...while döngüsü, bir koşulu kontrol ederken, döngü içeriği en az bir kez çalıştırıldığından emin olmak için kullanılan bir döngü türüdür. Yani, do...while döngüsü, döngü koşulu başlangıçta false olsa bile, döngü içeriğini en az bir kez çalıştırır.
+
+do...while döngüsünün temel yapısı şu şekildedir:
+```
+do {
+  // Döngü içeriği
+} while (koşul);
+```
+
+- İlk olarak, döngü içeriği (// Döngü içeriği) çalıştırılır.
+- Sonra, while anahtar kelimesinin ardından gelen koşul değerlendirilir.
+- Eğer koşul true ise, döngü tekrar başa dönerek içeriği bir kez daha çalıştırır.
+- Eğer koşul false ise, döngü sona erer ve program döngüden çıkar.
+
+do...while döngüsü, belirli bir işlemi en az bir kez gerçekleştirmeniz gereken durumlarda veya kullanıcıdan bir giriş almanız ve bu girişi değerlendirmeniz gereken durumlarda yaygın olarak kullanılır. Özellikle do...while döngüsünün içeriğinin en az bir kez çalıştırılması gerektiği durumlarda tercih edilir.
+
+Örnek
+```
+let sayac = 1;
+
+do {
+  console.log("Sayac değeri:", sayac);
+  sayac++;
+} while (sayac <= 5);
+```
+
+Bu kod, sayacın başlangıç değeri 1 olan bir do...while döngüsü oluşturur. Döngü, sayac değeri 5'e veya daha azına ulaşana kadar çalışmaya devam eder. Her döngü dönüşünde, sayac değeri bir artar ve bu değer konsola yazdırılır.
+
+Döngü, şu şekilde çalışır:
+```
+Sayac değeri: 1
+Sayac değeri: 2
+Sayac değeri: 3
+Sayac değeri: 4
+Sayac değeri: 5
+```
+
+Bu örnek, do...while döngüsünün en az bir kez çalışacağını ve ardından döngü şartı kontrol edilmeden önce döngü bloğunu çalıştıracağını gösterir. Bu nedenle döngü en az bir kez çalışır ve ardından şart kontrol edilir.
+
+# For, While ve do...while Döngüleri Arasındaki Farklar
+
+while, for, ve do...while döngüleri, döngülerin farklı kullanım senaryolarına uygun olarak tercih edildiği üç farklı döngü türüdür. İşte bu döngü türleri arasındaki temel farklar:
+
+**For Döngüsü:**
+
+- for döngüsü, başlangıç değeri, koşul, ve artış/değişim ifadesi gibi üç önemli bileşeni içerir.
+- Başlangıç değeri ilk olarak çalıştırılır, ardından koşul kontrol edilir, eğer koşul doğru ise döngü içeriği çalışır.
+- Döngü içeriği çalıştıktan sonra artış/değişim ifadesi çalıştırılır ve koşul tekrar kontrol edilir.
+- for döngüsü, döngüde kaç kez döneceğinizi bilmeniz gereken durumlarda kullanılır.
+
+**While Döngüsü:**
+
+- Döngü koşulu başlangıçta kontrol edilir. Eğer koşul doğru (true) ise, döngü içeriği çalışır.
+- Döngü içeriği çalışmadan önce koşul değerlendirilir, bu nedenle içeriğin hiç çalışmaması mümkündür.
+- Döngü içeriği çalışmadan döngüye girmeyebilir.
+- Genellikle döngüde ne kadar süre boyunca çalışacağınızı bilmediğiniz durumlarda kullanılır.
+
+**do...while Döngüsü:**
+
+- do...while döngüsü, döngü içeriğini en az bir kez çalıştırmak için kullanılır.
+- İlk olarak döngü içeriği çalışır, ardından koşul kontrol edilir. Eğer koşul doğru ise döngü içeriği tekrar çalıştırılır.
+- do...while döngüsü, içeriğin en az bir kez çalıştırılması gereken durumlarda kullanılır, ve döngü koşulu sonradan kontrol edildiğinden, içeriğin en az bir kez çalışması garanti edilir.
+
+Yani, kısaca temel farklar:
+
+- **for:** Başlangıç, koşul ve artış/değişim ifadeleri ile kontrol edilir.
+- **while:** Koşul başlangıçta kontrol edilir.
+- **do...while:** İçerik en az bir kez çalıştırılır ve sonra koşul kontrol edilir.
+
+Hangi döngü türünün kullanılacağı, döngünün amacına ve gereksinimlerine bağlı olarak değişir.
+
+# for...in Döngüsü
+
+for...in döngüsü, JavaScript'teki nesne özellikleri üzerinde dolaşmak için kullanılan bir döngü türüdür. Bu döngü, bir nesnenin tüm özelliklerini (property) alır ve bu özellikler üzerinde gezinmenizi sağlar. Genellikle nesne içindeki anahtar-değer çiftlerini incelemek veya nesnenin özelliklerini işlemek için kullanılır.
+
+for...in döngüsünün temel yapısı şu şekildedir:
+```
+for (let key in object) {
+  // object[key] ile nesne özelliğine erişim sağlayabilirsiniz
+  // Bu özelliği işleyebilirsiniz
+}
+```
+
+Örnek
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+```
+
+Bu kod, person adlı bir nesnenin özelliklerini dolaşır ve her bir özelliği (anahtar-değer çiftini) konsola yazdırır. Sonuç olarak, nesne özellikleri ve değerleri görüntülenir:
+```
+firstName: John
+lastName: Doe
+age: 30
+```
+
+for...in döngüsünün dezavantajlarından biri, nesne prototip zinciri üzerinde gezinmeyi içermesidir. Bu nedenle, nesnenin kendi özellikleri dışında prototip zincirindeki özellikleri de alabilir. Bu durumu kontrol etmek için hasOwnProperty yöntemini kullanabilirsiniz.
+
+# for...of Döngüsü
+
+for...of döngüsü, JavaScript'teki veri yapılarını (örneğin dizi, harita, dize, set, vb.) üzerinde gezinmek için kullanılan bir döngü türüdür. Bu döngü, koleksiyon tipi veri yapılarını ele alır ve her bir öğeyi dolaşmanızı sağlar. Bu sayede koleksiyonun içeriğine erişebilirsiniz.
+
+for...of döngüsünün temel yapısı şu şekildedir:
+```
+for (let element of iterable) {
+  // iterable koleksiyonundaki her öğeye erişebilirsiniz
+  // Bu öğeyi işleyebilirsiniz
+}
+```
+
+**Dizi üzerinde dolaşma:**
+```
+const numbers = [1, 2, 3, 4, 5];
+
+for (let number of numbers) {
+  console.log(number);
+}
+```
+
+Bu kod, numbers dizisindeki her sayıyı ekrana yazdırır.
+
+**Dize üzerinde karakterleri dolaşma:**
+```
+const text = "Hello";
+
+for (let char of text) {
+  console.log(char);
+}
+```
+
+Bu kod, "Hello" dizesindeki her karakteri ekrana yazdırır.
+
+**Harita (Map) üzerinde dolaşma:**
+```
+const myMap = new Map();
+myMap.set("name", "John");
+myMap.set("age", 30);
+
+for (let [key, value] of myMap) {
+  console.log(key + ": " + value);
+}
+```
+
+Bu kod, bir harita üzerindeki anahtar-değer çiftlerini dolaşır ve konsola yazar.
+
+for...of döngüsü, koleksiyonlardaki öğeleri sırayla ele alır ve bu öğeler üzerinde işlem yapmanızı sağlar. Bu nedenle, dizi, harita, set ve diğer veri yapıları üzerinde verileri işlemek için oldukça kullanışlıdır.
+
+# for...in ve for...of Döngüleri Arasındaki Farklar
+
+for...in ve for...of döngüleri, JavaScript'te kullanılan iki farklı döngü türüdür ve her biri farklı amaçlar için kullanılır. İşte bu iki döngü türü arasındaki temel farklar:
+
+**for...in Döngüsü:**
+
+- for...in döngüsü, genellikle nesne (object) özellikleri üzerinde gezinmek için kullanılır.
+- Döngü, nesnenin özelliklerini (property) ve bu özelliklerin isimlerini dolaşır.
+- for...in döngüsü, nesne özelliklerini numaralandırılabilir (enumerable) olduğu sürece dolaşır.
+- Döngü sırasında elde edilen değerler, genellikle özellik adlarıdır (string türünde).
+
+Örnek
+```
+const person = {
+  name: 'John',
+  age: 30,
+  job: 'developer'
+};
+
+for (const key in person) {
+  console.log(key, person[key]);
+}
+```
+
+**for...of Döngüsü:**
+
+- for...of döngüsü, genellikle diziler (arrays) ve diğer yinelenebilir (iterable) veri yapıları üzerinde gezinmek için kullanılır.
+- Döngü, yinelenebilir veri yapısındaki her bir öğeyi dolaşır.
+- for...of döngüsü, yinelenebilir veri yapılarının elemanlarını gezinmek için kullanışlıdır ve özellik adları gibi ileri düzey nesne özellikleri ile uğraşmaz.
+- Döngü sırasında elde edilen değerler, yinelenebilir veri yapısının elemanlarıdır.
+
+Örnek
+```
+const colors = ['red', 'green', 'blue'];
+
+for (const color of colors) {
+  console.log(color);
+}
+```
+
+Yani, for...in döngüsü özellikler üzerinde dolaşırken, for...of döngüsü yinelenebilir veri yapılarındaki elemanları dolaşır. Hangi döngüyü kullanmanız gerektiği, işlem yapmak istediğiniz veri yapısına bağlıdır.
+
+# Break (Döngü Çalışmasını Durdurmak)
+
+break, program içinde döngülerin veya switch-case yapılarının akışını kontrol etmek için kullanılan bir kontrol ifadesidir. break ifadesi kullanıldığı yerde, o anki döngüyü veya switch-case yapısını sonlandırır ve bir sonraki kod bloğuna geçer. Genellikle belirli bir koşul karşılandığında döngüyü veya switch-case yapısını sonlandırmak için kullanılır. Kısaca:
+
+- break, bir döngünün çalışmasını durdurur ve döngüden çıkar.
+- break, döngüyü sonlandırmak veya belirli bir koşulu karşılandığında döngüyü durdurmak için kullanılır.
+- Özellikle for, while ve do...while döngülerinde kullanılır.
+
+**for Döngüsünde break:**
+
+```
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    break; // i'nin değeri 3 olduğunda döngüyü sonlandırır
+  }
+  console.log(i);
+}
+// Çıktı: 1
+//        2
+```
+
+**while Döngüsünde break:**
+
+```
+let i = 1;
+while (i <= 5) {
+  if (i === 3) {
+    break; // i'nin değeri 3 olduğunda döngüyü sonlandırır
+  }
+  console.log(i);
+  i++;
+}
+// Çıktı: 1
+//        2
+```
+
+**switch-case Yapısında break:**
+
+```
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("It's Monday.");
+    break;
+  case "Tuesday":
+    console.log("It's Tuesday.");
+    break;
+  default:
+    console.log("It's another day.");
+}
+// Çıktı: It's Monday.
+```
+
+break ifadesi, döngülerde veya switch-case yapılarında belirli koşullara dayalı olarak akışı kontrol etmek ve gerektiğinde işlemi sonlandırmak için kullanılır.
+
+# Continue (Döngü Akışını Kontrol Etmek)
+
+continue, program içinde döngülerin akışını kontrol etmek için kullanılan bir kontrol ifadesidir. continue ifadesi kullanıldığı yerde, o anki döngü iterasyonunu sonlandırır ve bir sonraki iterasyona geçer. Yani, döngünün geri kalan kodunu atlayarak bir sonraki adıma geçer. Kısaca:
+
+- continue, döngüyü bir sonraki adıma geçirmek için kullanılır. Yani, döngünün geri kalan kısmını atlar ve bir sonraki iterasyona geçer.
+- break gibi, özellikle for, while ve do...while döngülerinde kullanılır.
+- switch-case yapılarında kullanılmaz. Kullanılmasının hiçbir anlamı yoktur ve hataya neden olur. Continue yalnızda döngüler içinde kullanılabilir.
+
+**for Döngüsünde continue:**
+
+```
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue; // i'nin değeri 3 olduğunda bu iterasyonu atlayarak bir sonrakine geçer
+  }
+  console.log(i);
+}
+// Çıktı: 1
+//        2
+//        4
+//        5
+```
+
+**while Döngüsünde continue:**
+
+```
+let i = 1;
+while (i <= 5) {
+  if (i === 3) {
+    i++; // continue kullanmadan i'nin değerini artırmalıyız, aksi takdirde sonsuz döngü olurdu
+    continue; // i'nin değeri 3 olduğunda bu iterasyonu atlayarak bir sonrakine geçer
+  }
+  console.log(i);
+  i++;
+}
+// Çıktı: 1
+//        2
+//        4
+//        5
+```
+
+continue ifadesi, belirli bir koşulu karşıladığınızda o anki iterasyonu atlamak ve bir sonraki iterasyona geçmek istediğinizde kullanılır. Bu, döngüler içinde belirli koşullara göre işlem yapmanıza olanak sağlar.
