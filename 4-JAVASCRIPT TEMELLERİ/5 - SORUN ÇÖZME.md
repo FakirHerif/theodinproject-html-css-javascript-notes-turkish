@@ -94,6 +94,7 @@ Bu çözmeyi amaçladığımız bir problemdir. Oldukça basit olduğundan belki
 - 5- Eğer kullanıcının girdiği sayı 3 veya 5'e bölünemiyorsa (örneğin 2, 4, 6 vs gibi) ekrana çıktı olarak girdiği sayıyı yazdırın
 
 **Plan**
+
 Programınızın bir arayüzü var mı? Neye benzeyecek? FizzBuzz çözümümüz bir tarayıcı konsolu programı olacağı için bir arayüze ihtiyacımız yok. Tek etkileşimimiz kullanıcıların bir sayı girmesine izin vermek olacaktır. 
 
 Programınızda hangi girdiler olacak? Kullanıcı veri mi girecek yoksa başka bir yerden mi veri alacaksınız? Kullanıcı bir istemden (açılır kutu) bir sayı girecektir. 
