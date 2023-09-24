@@ -45,3 +45,6 @@ console.log(playRound(playerSelection, computerSelection));
 *Bunun gibi etkileşimli projeler yaparken, daha fazla özellik eklemek, etkileşimi geliştirmek, kullanıcı deneyimini geliştirmek, tasarım ve stil eklemek vb. gibi şeyler size cazip gelebilir. Ama bunu yapmamanızı ve bu çabanızı portföy projeleriniz için saklamanızı öneriyoruz. Şimdilik sadece sizden bekleneni yapın.*
 
 Öğrenme zihniyeti hakkında daha fazla bilgi için ve portföy parçaları hakkında daha fazla bilgi için [bu bağlantıyı](https://dev.to/theodinproject/learning-code-f56), [bu bağlantıyı](https://dev.to/theodinproject/strategically-building-your-portfolio-1km4) ve [bu bağlantıyı](https://dev.to/theodinproject/becoming-a-top-success-story-mindset-3dp2) okuyun.
+
+
+**NOT:** *PROJENİN YAPILMIŞ SON HALİ, "7 - TAŞ KAĞIT MAKAS PROJESİ ÇÖZÜMÜ" İSİMLİ KLASÖRÜN İÇİNDE YER ALMAKTADIR.*
