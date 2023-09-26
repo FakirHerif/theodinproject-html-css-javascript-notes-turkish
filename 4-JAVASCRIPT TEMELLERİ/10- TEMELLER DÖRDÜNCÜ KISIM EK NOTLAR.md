@@ -1055,3 +1055,336 @@ Bu kod, meyveler dizisindeki her meyveyi alır ve indeksi ile birlikte ekrana ya
 2 "Portakal"
 3 "Üzüm"
 ```
+
+# Döngüler
+
+**Not:** "4- Temeller Üçüncü Kısım Ek Notlar" dosyasında döngülerden bahsetmiştim ancak yinelemek adına bu notlarda tekrar anlatıp, üzerinden geçeceğim.
+
+Döngüler, programlamanın temel yapı taşlarından biridir ve tekrar eden işlemleri otomatikleştirmek için çok kullanışlı olan yapılardır.
+
+# Koleksiyonda Döngü Kullanmak
+
+Bir öğe koleksiyonumuz olduğunu ve her öğeyle bir şeyler yapmak istediğimizi düşünelim, bu durumda döngüleri kullanmamız gerekir.
+
+JavaScript'te "Array" (Dizi) koleksiyonunu öğrendik ve bunun yanı sıra, JavaScript'te "Set" ve "Map" gibi başka veri koleksiyonları da bulunmaktadır. (Bu konulara değineceğiz.)
+
+# for...of Döngüsü
+
+Bir koleksiyonda döngü oluşturmanın temel aracı for...of döngüsüdür.
+
+for...of ifadesi, yinelenebilir bir nesneden kaynaklanan bir dizi değer üzerinde çalışan bir döngüyü yürütür. Yinelenebilir nesneler Array, String, TypedArray, Map, Set, NodeList (ve diğer DOM koleksiyonları) gibi yerleşik örneklerin yanı sıra argümanlar nesnesini, oluşturucu işlevler tarafından üretilen oluşturucuları ve kullanıcı tanımlı yinelenebilirleri içerir.
+
+İşte for...of döngüsünün temel yapısı:
+
+```
+for (const element of iterable) {
+  // Her döngü adımında yapılacak işlemler
+}
+```
+
+- **iterable:** yinelenebilir bir nesne olmalıdır. Örneğin, bir dizi, bir dize veya bir set olabilir.
+- **element:** her döngü adımında iterable'ın bir öğesini temsil eden bir değişkendir. Bu değişkeni tanımlayarak, her döngü adımında iterable'ın bir sonraki öğesine erişebilirsiniz.
+
+Örnek
+
+```
+const fruits = ["Apple", "Banana", "Cherry"];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+```
+
+Bu kod parçası, fruits dizisindeki her meyveyi sırayla döngüye alır ve her birini console.log ile konsola yazdırır. Bu nedenle çıktı, meyvelerin listesini gösterir.
+
+veya bir string için kullanabiliriz:
+
+```
+const iterable = "boo";
+
+for (const value of iterable) {
+  console.log(value);
+}
+// "b"
+// "o"
+// "o"
+```
+
+# for...in Döngüsü
+
+"for...in" döngüsü, JavaScript'te kullanılan bir döngü türüdür ve genellikle nesnelerin (objects) özelliklerini ve dizilerin (arrays) indislerini gezme amaçları için kullanılır. "for...in" döngüsü, bir nesnenin veya dizinin tüm özelliklerini veya indislerini tek tek dolaşarak işlem yapmanıza olanak sağlar.
+
+"for...in" döngüsünün temel kullanımı şu şekildedir:
+
+```
+for (let key in object) {
+  // Her bir özellik veya indis üzerinde yapılacak işlem
+}
+```
+
+Burada key, her döngü adımında nesnenin veya dizinin bir özelliğini veya indisini temsil eden bir değişkendir. "for...in" döngüsü, belirtilen nesnenin veya dizinin tüm özelliklerini veya indislerini sırayla key değişkenine atayarak döner.
+
+Örnek olarak, bir nesnenin özelliklerini dolaşmak için "for...in" döngüsünü kullanabiliriz:
+
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+```
+
+Bu örnekte, "person" adlı bir nesnenin özellikleri dolaşılır, her bir özellik için özelliğin adı ("key") ve değeri ekrana yazdırılır.
+
+Dikkat etmeniz gereken birkaç önemli nokta:
+
+- "for...in" döngüsü nesnelerin ve dizilerin özelliklerini dolaşırken kullanılırken, "for...of" döngüsü sadece dizilerin elemanlarını dolaşmak için kullanılır.
+
+- "for...in" döngüsü özelliklerin sırasız bir şekilde dolaşılmasını garanti etmez, bu nedenle özelliklerin sırası önemli değildir.
+
+- "for...in" döngüsü, nesnenin kendi özellikleri yanı sıra nesne zincirindeki (prototype chain) özellikleri de dolaşabilir. Bu nedenle, nesnenin kendi özelliklerini kontrol etmek için "hasOwnProperty" yöntemini kullanmak iyi bir uygulama yöntemidir.
+
+Örnek
+
+```
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+
+Object.prototype.sayHello = function() {
+  console.log("Hello, " + this.firstName);
+};
+
+for (let key in person) {
+  console.log(key); // firstName, lastName, sayHello
+}
+```
+
+Bu nedenle, "for...in" döngüsü kullanırken dikkatli olmalı ve gerekli kontrol ve filtrelemeleri uygulamalısınız.
+
+# map() ve filter()
+
+**map()**
+
+Bir koleksiyondaki her öğeye bir şeyler yapmak ve değiştirilen öğeleri içeren yeni bir koleksiyon oluşturmak için map() fonksiyonunu kullanabilirsiniz. Yabi bir dizi veya başka bir koleksiyonun her öğesini döngü ile gezerek, her öğe üzerinde belirlediğiniz bir işlemi yapar ve bu işlem sonucu oluşan yeni değerleri bir başka dizi olarak döndürür. Örneğin, bir dizideki her öğeyi iki katına çıkarmak için map() kullanabilirsiniz.
+
+Örnek
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+// Dizideki her sayıyı iki katına çıkaralım ve yeni bir dizi oluşturalım.
+const doubledNumbers = numbers.map((number) => {
+  return number * 2;
+});
+
+console.log(doubledNumbers); // Sonuç: [2, 4, 6, 8, 10]
+```
+
+Bu örnekte, map() fonksiyonu, numbers dizisindeki her öğeyi (sayıyı) alır, bu sayıyı iki katına çıkarır ve yeni bir dizi olan doubledNumbers içinde saklar. Sonuç olarak, doubledNumbers dizisi orijinal dizideki her sayının iki katı değerlerini içerir.
+
+map() fonksiyonu, verileri dönüştürmek veya her öğe üzerinde belirli bir işlem yapmak için yaygın olarak kullanılır.
+
+**filter()**
+
+Bir koleksiyondaki her öğeyi test etmek ve yalnızca eşleşen öğeleri içeren yeni bir koleksiyon oluşturmak için filter() işlevini kullanabilirsiniz. Yani filter() fonksiyonu, bir dizi veya başka bir koleksiyon içinde belirlediğiniz bir koşulu sağlayan öğeleri filtreler ve bu koşulu sağlayan öğelerden oluşan yeni bir dizi döndürür. Örneğin, bir dizideki sadece belirli bir şartı karşılayan öğeleri almak için filter() kullanabilirsiniz.
+
+Örnek
+
+```
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Çift sayıları filtreleyerek yeni bir dizi oluşturalım.
+const evenNumbers = numbers.filter((number) => {
+  return number % 2 === 0;
+});
+
+console.log(evenNumbers); // Sonuç: [2, 4, 6, 8, 10]
+```
+
+Bu örnekte, filter() yöntemini kullanarak numbers dizisindeki çift sayıları filtreleyip yeni bir dizi oluşturuyoruz. filter() yöntemi, belirli bir koşulu sağlayan öğeleri içeren yeni bir dizi oluşturmak için kullanılır. Bu örnekte, çift sayıları bulmak için % (modül) operatörünü kullanarak bir koşul belirtiyoruz.
+
+# for Döngüsü
+
+For döngüsü, programlamada belirli bir kod bloğunun belirli bir koşul veya sayaç durumlarına göre tekrarlanmasını sağlayan bir döngü yapısıdır. For döngüsü, belirli bir başlangıç değeri ile başlar, belirli bir koşulu kontrol eder ve her döngü adımında belirli bir artış veya azalma gerçekleştirir. Bu sayede kodunuz belirli bir işlemi belirli bir sayıda veya belirli bir koşul altında tekrar tekrar gerçekleştirebilir.
+
+Genellikle for döngüsü şu şekilde yazılır:
+
+```
+for (başlangıç; koşul; artış veya azalma) {
+  // Döngü içinde yapılacak işlemler
+}
+```
+
+- **"başlangıç"** kısmı, döngünün başlangıç durumunu tanımlar ve genellikle bir sayaç değişkeninin başlangıç değerini atar.
+- **"koşul"** kısmı, döngünün ne zaman sona ereceğini belirler. Bu koşulun değeri her döngü döndüğünde kontrol edilir, ve koşulun sağlanmaması durumunda döngü sona erer.
+- **"artış veya azalma"** kısmı, her döngü adımında sayaç değişkeninin nasıl değişeceğini belirtir. Bu kısım döngünün her dönüşünde çalıştırılır.
+
+Örnek olarak, 1'den 10'a kadar olan sayıları ekrana yazdırmak için bir for döngüsü kullanabiliriz:
+
+```
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+```
+
+Bu döngü, i değişkenini 1'den başlatır, her adımda 1 artırır ve i değeri 10'a eşit veya küçük olduğu sürece çalışır. Bu nedenle 1'den 10'a kadar olan sayıları ekrana yazdırır.
+
+array içinde kullanımını görelim:
+
+```
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+for (let i = 0; i < cats.length; i++) {
+  console.log(cats[i]);
+}
+```
+
+cats içinde yer alan tüm ögelerimizi lister bunun yerine for...of döngüsü de kullanabiliriz.
+
+Peki for döngüsü ile biraz daha detaylı bir örnek verelim:
+
+```
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "Kedilerimin isimleri: ";
+
+for (const cat of cats) {
+  myFavoriteCats += `${cat}, `;
+}
+
+console.log(myFavoriteCats);    // "Kedilerimin isimleri: Pete, Biggles, Jasmine, "
+```
+
+Bu örnekte son kedi ismimizin önüne "ve" kelimesini eklesek bence daha güzel bir çıktı almış oluruz, hadi hemen yapalım:
+
+```
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "Kedilerimin isimleri: ";
+
+for (let i = 0; i < cats.length; i++) {
+  if (i === cats.length - 1) {
+    // Dizinin sonuna geldik
+    myFavoriteCats += `ve ${cats[i]}.`;
+  } else {
+    myFavoriteCats += `${cats[i]}, `;
+  }
+}
+
+console.log(myFavoriteCats);    // "Kedilerimin isimleri: Pete, Biggles, ve Jasmine."
+```
+
+# Break
+
+"Break", bir döngü içinde belirli bir koşul sağlandığında döngünün aniden sona erdirilmesini sağlar.
+
+Özellikle döngü içindeki bir koşulun sağlanması durumunda döngüyü tamamlamadan çıkmak veya döngüyü belirli bir noktada sonlandırmak istediğinizde "break" kullanılır. "Break", döngüyü terk eder ve döngü sona erer.
+
+Örnek
+
+```
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    break; // Eğer i değeri 5 olduğunda döngüyü sonlandır.
+  }
+  console.log(i);
+}
+```
+
+Bu örnekte, 1'den 10'a kadar olan sayıları ekrana yazdırmak için bir "for" döngüsü kullanılmıştır. Ancak, eğer i değeri 5 olduğunda (yani i === 5 koşulu sağlandığında), "break" çalışır ve döngü aniden sona erer. Bu nedenle çıktıda sadece 1, 2, 3 ve 4 sayıları görünür, ve döngü 5'ten sonraki sayıları yazdırmadan sona erer.
+
+"Break", döngülerin belirli koşullar altında erken sonlandırılması gerektiği durumlarda oldukça faydalıdır.
+
+# Continue 
+
+"Continue", döngü içinde belirli bir koşulu sağlayan durumlarda, o anki döngü tekrarının geri atlanmasını ve bir sonraki tekrara geçilmesini sağlar.
+
+Özellikle döngü içinde belirli bir koşulu sağlayan öğeleri atlamak ve işlem yapmak istediğinizde "continue" kullanılır. Bu, o anki döngü tekrarını sonlandırmadan, bir sonraki tekrara geçer.
+
+Örnek
+
+```
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue; // Eğer i değeri 3 olduğunda bu tekrarı atla ve bir sonraki tekrara geç.
+  }
+  console.log(i);
+}
+```
+
+Bu örnekte, 1'den 5'e kadar olan sayıları ekrana yazdırmak için bir "for" döngüsü kullanılmıştır. Ancak, eğer i değeri 3 olduğunda (yani i === 3 koşulu sağlandığında), "continue" çalışır. Bu durumda, 3 olan tekrar atlanır ve döngü 4 ve 5 olan tekrarlara devam eder. Sonuç olarak, çıktıda sadece 1, 2, 4 ve 5 sayıları görünür.
+
+"Continue", döngü içinde belirli koşullar altında belirli işlemlerin atlanması gerektiği durumlarda kullanışlıdır. Bu sayede istenmeyen öğeleri döngüden geçirebilir veya işlem yapmadan geçebilirsiniz.
+
+# while ve do...while Döngüleri
+
+"While" ve "do...while" döngüleri, JavaScript ve diğer birçok programlama dilinde kullanılan iki farklı döngü türüdür. Bu döngüler, belirli bir koşul doğru olduğu sürece bir kod bloğunu tekrar tekrar çalıştırmak için kullanılır.
+
+**while döngüsü**
+
+- "While" döngüsü, başlangıçta bir koşulu kontrol eder. Koşul doğru (true) ise, belirtilen kod bloğunu çalıştırır. Koşul yanlış (false) ise, döngüyü hiç çalıştırmadan atlar.
+- Döngünün çalışma mantığı: Önce koşulu kontrol eder, sonra kod bloğunu çalıştırır, ardından tekrar koşulu kontrol eder. Koşul hala doğru ise, tekrar kod bloğunu çalıştırır ve bu süreci koşul yanlış olana kadar sürdürür.
+- "While" döngüsü, başlangıçta koşul yanlışsa hiç çalışmayabilir.
+
+Örnek
+
+```
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+Yukarıdaki örnekte, "i" değişkeninin değeri 0'dan başlayarak 5'e kadar olan sayıları ekrana yazdıracak bir "while" döngüsü bulunmaktadır.
+
+**do...while döngüsü**
+
+- "Do...while" döngüsü, önce bir kod bloğunu çalıştırır ve ardından bir koşulu kontrol eder. Koşul doğru (true) ise, kod bloğunu yeniden çalıştırır. Koşul yanlış (false) ise, döngüyü sonlandırır.
+- "Do...while" döngüsü, kod bloğunu en az bir kez çalıştırmayı garanti eder, çünkü koşulu kod bloğu çalıştırmadan önce kontrol etmez.
+
+Örnek
+```
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+Yukarıdaki örnekte, "do...while" döngüsü, "i" değişkeninin değeri 0'dan başlayarak 5'e kadar olan sayıları ekrana yazdıracaktır. Koşul, kod bloğu çalıştırıldıktan sonra kontrol edilir, bu nedenle kod bloğu en az bir kez çalıştırılır.
+
+Hangi döngüyü kullanmanız gerektiği, kullanım senaryonuza ve gereksinimlerinize bağlıdır. "While" döngüsü, koşul başlangıçta yanlışsa hiç çalıştırmadan atlayabilirken, "do...while" döngüsü kod bloğunu en az bir kez çalıştırmayı garanti eder. Bu nedenle, hangi döngü türünün sizin için uygun olduğunu dikkatlice değerlendirmeniz gerekebilir.
+
+
+**Kısaca for, while ve do...while arasındaki farklar**
+
+- **"for" döngüsü**, belirli bir sayıda tekrarlamaları gereken durumlarda idealdir. Genellikle bir sayaç (counter) kullanılarak çalışır.
+
+```
+for (başlangıç; koşul; artış) {
+  // Döngü içinde yapılması gereken işlemler
+}
+```
+
+- **"while" döngüsü**, bir koşul doğru olduğu sürece döngünün çalışmasını sağlar. Koşul başlangıçta doğru ise, döngü hiç çalışmamış olsa bile en baştan çalıştırabilir.
+
+```
+while (koşul) {
+  // Döngü içinde yapılması gereken işlemler
+}
+```
+
+- **"do...while" döngüsü**, bir kod bloğunu en az bir kez çalıştırmayı garanti eder, ardından bir koşulu kontrol eder. Koşul doğru olduğu sürece döngüyü tekrarlar.
+
+```
+do {
+  // Döngü içinde yapılması gereken işlemler
+} while (koşul);
+```
