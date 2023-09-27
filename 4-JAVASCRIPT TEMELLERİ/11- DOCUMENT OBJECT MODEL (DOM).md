@@ -255,3 +255,205 @@ YALNIZCA JavaScript'i ve yukarıda gösterilen DOM yöntemlerini kullanarak aşa
     - "Ben bir div'in içindeyim" yazan başka bir h1 etiketi oluşturun.
     - "BEN DE!" yazan bir p etiketi oluşturun.
     - Bunun için ipucu: createElement ile div'i oluşturduktan sonra, container'a eklemeden önce h1 ve p etiketlerini buna ekleyin.
+
+# Events
+
+DOM'u JavaScript ile manipüle etmeyi öğrendikten sonra, bir sonraki adım web sayfalarınızda bu işlemi dinamik veya talep üzerine nasıl gerçekleştireceğinizi öğrenmektir! Events, bu sihirli olayları sayfalarınızda gerçekleştirmenin yoludur. Events, web sayfanızda gerçekleşen fare tıklamaları veya klavye tuş vuruşları gibi eylemlerdir ve JavaScript'i kullanarak web sayfanızın bu event'ları dinlemesini ve tepki vermesini sağlayabiliriz.
+
+Bu işlemi üç temel yol ile gerçekleştirebilirsiniz: HTML öğeleriniz üzerinde doğrudan fonksiyon niteliklerini belirleyebilirsiniz, JavaScript'teki DOM düğmelerinin form olaylarına (onclick, onmousedown vb.) ait özelliklerini ayarlayabilirsiniz veya JavaScript'teki DOM düğmelerine etkinlik dinleyicileri ekleyebilirsiniz. Etkinlik dinleyicileri(event listeners) kesinlikle tercih edilen yöntemdir, ancak diğer iki yöntemi de sıkça göreceksiniz, bu nedenle üçünü de ele alacağız.
+
+Tıklandığında "Merhaba Dünya" uyarısını veren 3 düğme oluşturacağız. Hepsini kendi HTML dosyanızı kullanarak veya CodePen gibi bir araç kullanarak deneyin.
+
+**Birinci Yöntem**
+
+```
+<button onclick="alert('Hello World')">Click Me</button>
+```
+
+Bu yöntem, HTML dosyamızı JavaScript ile karıştırarak ideal olmayan bir yaklaşım sağlar. Ayrıca, bu yöntemi kullanarak bir DOM öğesi başına yalnızca bir "onclick" özelliği ayarlayabiliriz, bu nedenle bu yöntemi kullanarak tıklama olayına yanıt olarak birden fazla farklı fonksiyonu çalıştıramayız.
+
+**İkinci Yöntem**
+
+```
+<!-- HTML DOSYASI -->
+<button id="btn">Click Me</button>
+```
+
+```
+// JavaScript DOSYASI
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+```
+
+Bu yöntem biraz daha iyi. JS'yi HTML'den bir JS dosyasına taşıdık ancak hala bir DOM öğesinin yalnızca 1 "onclick" özelliğine sahip olabilmesi sorunuyla karşı karşıyayız.
+ 
+Arrow fonksiyonları gözden geçirmeniz mi gerekiyor? [Bu bağlantıya tıklayın.](https://javascript.info/arrow-functions-basics)
+
+**Üçüncü Yöntem**
+
+```
+<!-- HTML DOSYASI -->
+<button id="btn">Click Me Too</button>
+```
+
+```
+// JavaScript DOSYASI
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
+```
+
+Şimdi, sorumlulukların ayrı tutulduğu ve gerektiğinde birden çok etkinlik dinleyicisi kullanılabilen bir yöntem kullanıyoruz. Üçüncü yöntem, çok daha esnek ve güçlüdür, ancak kurulumu biraz daha karmaşıktır.
+
+Bu yöntemlerin üçünün de aşağıdaki gibi isimlendirilmiş fonksiyonlarla kullanılabileceğini unutmayın:
+
+```
+<!-- HTML DOSYASI -->
+<!-- BİRİNCİ YÖNTEM -->
+<button onclick="alertFunction()">CLICK ME BABY</button>
+```
+
+```
+// JavaScript DOSYASI
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+
+// İKİNCİ YÖNTEM
+btn.onclick = alertFunction;
+
+// ÜÇÜNCÜ YÖNTEM
+btn.addEventListener('click', alertFunction);
+```
+
+İsimlendirilmiş fonksiyonları kullanmak kodunuzu önemli ölçüde temizleyebilir ve eğer fonksiyon birden fazla yerde kullanmak isteyeceğiniz bir şeyse gerçekten iyi bir fikirdir.
+
+Her üç yöntemle de çağırdığımız fonksiyona bir parametre ileterek olay hakkında daha fazla bilgiye erişebiliriz. Bunu kendinizde deneyin:
+
+```
+btn.addEventListener('click', function (e) {
+  console.log(e);
+});
+```
+
+(e) fonksiyonunun addEventListener'dan bir callback olduğunu unutmayın. Callback'lerle ilgili daha fazla açıklamayı [BURADA](https://dev.to/i3uckwheat/understanding-callbacks-2o9e) bulabilirsiniz.
+
+Bu fonksiyondaki e, olayın kendisine başvuran bir nesnedir. Bu nesnenin içinde, hangi fare düğmesine veya tuşa basıldığı gibi birçok yararlı özellik ve yönteme (bir nesnenin içinde yaşayan işlevler) veya veya etkinliğin hedefi (tıklanan DOM düğümü) hakkında bilgiye ulaşabilirsiniz.
+
+Bunu deneyin:
+
+```
+btn.addEventListener('click', function (e) {
+  console.log(e.target);
+});
+```
+
+Ve şimdi bunu deneyin:
+
+```
+btn.addEventListener('click', function (e) {
+  e.target.style.background = 'blue';
+});
+```
+
+Oldukça hoş, değil mi?
+
+**Attaching listeners to groups of nodes / Dinleyicileri düğüm gruplarına ekleme**
+
+Birçok öğeye çok sayıda benzer olay dinleyicisi ekliyorsanız, bu çok fazla kod karmaşası gibi görünebilir. Bunu daha verimli bir şekilde yapmanın birkaç yolu vardır. Yukarıda, querySelectorAll('selector') ile belirli bir seçiciyle eşleşen tüm öğelerin düğüm listesini alabileceğimizi öğrendik. Her birine bir dinleyici eklemek için tüm listeyi şu şekilde tekrarlamamız yeterlidir:
+
+```
+<div id="container">
+    <button id="1">Click Me</button>
+    <button id="2">Click Me</button>
+    <button id="3">Click Me</button>
+</div>
+```
+
+```
+// butonlar bir düğüm listesidir. Bir diziye çok benziyor ve öyle davranıyor.
+const buttons = document.querySelectorAll('button');
+
+// her düğmeyi yinelemek için .forEach yöntemini kullanıyoruz
+buttons.forEach((button) => {
+
+  // // ve her biri için bir 'click' listener ekliyoruz
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
+```
+
+DOM manipülasyonu ve olay yönetimi söz konusu olduğunda bu sadece buzdağının görünen kısmıdır ancak bazı egzersizlerle başlamanız için bu yeterlidir. Şu ana kadarki örneklerimizde yalnızca 'tıklama' olayını kullandık ama kullanabileceğiniz çok daha fazlası var. (click, dblclick, keydown, keyup gibi)
+
+[Bu sayfada](https://www.w3schools.com/jsref/dom_obj_event.asp) her olayın açıklamalarını içeren eksiksiz bir liste bulabilirsiniz.
+
+# Görev
+
+Web sayfalarını manipüle etmek, JavaScript dilinin birincil faydasıdır! Bu teknikler, bir ön uç geliştirici olarak muhtemelen her gün uğraşacağınız şeylerdir, o yüzden hadi pratik yapalım!
+
+- [Bu MDN makalesindeki](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_a_dynamic_shopping_list) mücadeleyi tamamlayın ve becerilerinizi test edin!
+
+- Bu [JavaScript DOM Eğitimindeki](https://www.javascripttutorial.net/javascript-dom/) ilk 2 bölümü inceleyin. getElementById gibi bazı yöntemlerin daha eski olduğunu ve günümüzde daha az kullanıldığını unutmayın. Daha sonra 7. bölümü inceleyin.
+
+# Bilgi Kontrolü
+
+Bu kısımda, bu dersi anladığınızı kontrol edebilmeniz için sorular bulunmaktadır.
+
+- [DOM nedir?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#dom-document-object-model)
+
+- [Çalışmak istediğiniz düğümleri nasıl hedeflersiniz?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#targeting-nodes-with-selectors)
+
+- [DOM'da element nasıl oluşturursunuz?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#element-creation)
+
+- [DOM'a bir elementi nasıl eklersiniz?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#append-elements)
+
+- [Bir elementi DOM'dan nasıl kaldırırsınız?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#remove-elements)
+
+- [DOM'daki elementi nasıl değiştirebilirsiniz?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#altering-elements)
+
+- [Bir DOM elementine metin eklerken textContent'i mi yoksa innerHTML'i mi kullanmalısınız?  Neden?](https://www.youtube.com/watch?v=ns1LX6mEvyM)
+
+- [DOM düğümleriyle çalışırken JavaScript tag'inizi HTML dosyanızın neresine eklemelisiniz?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#important-note)
+
+- [Event'lar ve listener'lar nasıl çalışır?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#events)
+
+- [Kodunuzda event'ları kullanmanın üç yolu nedir?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#events)
+
+- [Event listener neden event'ları ele almanın en tercih edilen yoludur?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#attaching-listeners-to-groups-of-nodes)
+
+- [Listener'larda isimlendirilmiş fonksiyonları kullanmanın faydaları nelerdir?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#method-3)
+
+- [querySelector ve querySelectorAll'ın return değerleri arasındaki fark nedir?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#query-selectors)
+
+- [Bir “düğüm listesi(nodelist)” neleri içerir?](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#query-selectors)
+
+- [“capture” ve “bubbling” arasındaki farkı açıklayın.](https://www.youtube.com/watch?v=F1anRyL37lE)
+
+# Ek Kaynaklar
+
+Bu kısımda bu içeriğe yönelik faydalı bağlantılar bulunmaktadır. Bağlantıları incelemeniz gerekli değil sadece tamamlayıcı ve destekleyici bilgiler olarak düşünebilirsiniz.
+
+- [Eloquent JS - DOM](eloquentjavascript.net/13_dom.html)
+
+- [Eloquent JS - Event'ları Yönetme](https://eloquentjavascript.net/15_event.html)
+
+- [DOMenlightenment](https://domenlightenment.com/)
+
+- [Plain JavaScript, JS'nin diğer yönlerinin yanı sıra DOM ile ilgili JavaScript kod parçacıkları ve açıklamalara bir referanstır. jQuery öğrendiyseniz, o olmadan işleri nasıl yapacağınızı anlamanıza yardımcı olacaktır.](https://plainjs.com/javascript/)
+
+- [Bu W3Schools makalesi DOM hakkında basit ve anlaşılması kolay dersler sunmaktadır.](https://www.w3schools.com/js/js_htmldom.asp)
+
+- [JS DOM Hızlandırılmış Kursu, Traversy Media tarafından DOM hakkında kapsamlı ve iyi açıklanmış 4 bölümlük bir video serisidir.](https://www.youtube.com/watch?v=0ik6X4DJKCc&list=PLillGF-RfqbYE6Ik_EuXA2iZFcE082B3s)
+
+- [Dom'u Anlamak, DigitalOcean'ın uygun şekilde adlandırılmış makale tabanlı bir eğitim serisidir.](https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model)
+
+- [MDN'nin event'lara girişi, event'larla ilgili bu derste öğrendiğiniz konuların aynılarını kapsar.](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+
+- [Wes Bos'un Drumkit JavaScript30 programı görevin kapsadığı içeriği güçlendirir.](https://www.youtube.com/watch?v=VuN8qwZoego) [Videoda kullanımdan kaldırılmış bir tuş kodu klavye olayının kullanıldığını fark edeceksiniz.](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) [bunu önerilen kod klavyesi olayıyla değiştirin ve veri anahtarı etiketlerini buna göre değiştirin.](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code)
+
+- [Wes Bos'un JavaScript30 programından Event Capture, Propagation and Bubbling videosu.](https://www.youtube.com/watch?v=F1anRyL37lE)
+
+# EKSTRA NOTLAR
+*JAVASCRIPT TEMELLERİ klasörü/dizini içerisinde yer alan, tüm konuların ele alındığı, açıklandığı ve anlatıldığı şahsi olarak oluşturduğum ek notları incelemeyi unutmayın !!!*
