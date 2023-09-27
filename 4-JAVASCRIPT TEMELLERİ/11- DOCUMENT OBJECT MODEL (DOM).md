@@ -240,3 +240,18 @@ Alternatif olarak, JavaScript dosyanızı HTML belgenizin head bölümünde bağ
 ```
 
 Daha fazla bilgi için [MDN makalesindeki](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#applying_css_and_javascript_to_html) ikinci maddeyi okuyabilirsiniz. Bu madde ayrıca ek script yükleme stratejilerine yönlendiren bir bağlantı içerir.
+
+# Alıştırmalar
+
+Yukarıdaki örneği kendi bilgisayarınızdaki dosyalara kopyalayın. Çalışmasını sağlamak için HTML iskeletinin geri kalanını sağlamanız ve JavaScript dosyanızı bağlamanız veya JavaScript'i sayfadaki bir komut dosyası etiketine yerleştirmeniz gerekir. Devam etmeden önce her şeyin çalıştığından emin olun!
+
+YALNIZCA JavaScript'i ve yukarıda gösterilen DOM yöntemlerini kullanarak aşağıdaki elementleri kapsayıcıya ekleyin.
+
+- "Hey ben kırmızıyım!" yazan kırmızı renkli bir p etiketi oluşturun
+
+- "Ben mavi bir h3'üm!" yazan mavi renkli bir h3 etiketi oluşturun
+
+- içinde aşağıdaki öğelerin bulunduğu, siyah kenarlıklı ve pembe arka plan rengine sahip bir div etiketi oluşturun.
+    - "Ben bir div'in içindeyim" yazan başka bir h1 etiketi oluşturun.
+    - "BEN DE!" yazan bir p etiketi oluşturun.
+    - Bunun için ipucu: createElement ile div'i oluşturduktan sonra, container'a eklemeden önce h1 ve p etiketlerini buna ekleyin.
