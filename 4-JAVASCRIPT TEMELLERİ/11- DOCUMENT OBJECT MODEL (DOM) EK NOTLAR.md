@@ -66,3 +66,123 @@ document.getElementById("demo").innerHTML = "Hello World!";
 ```
 
 bu örnekte, id'si demo olan bir paragraf tag'imiz var ve içeriği boş. Öncelikle bunu **getElementById** yöntemiyle seçtik ve daha sonra **innerHTML** yöntemi kullanarak içeriğini değiştirdik yani "Hello World!" ekledik. 
+
+# HTML Element'lerini Bulmak
+
+**Method**
+
+- **document.getElementById(id):** id'den ögeyi bulur
+
+Örnek
+
+```
+<p id="intro">Finding HTML Elements by Id</p>
+
+<script>
+const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML = 
+"The text from the intro paragraph is: " + element.innerHTML;
+
+</script>
+
+// Çıktı ===> The text from the intro paragraph is: Finding HTML Elements by Id
+```
+
+- **document.getElementsByTagName(name):** tag'den ögeyi bulur
+
+Örnek
+
+```
+<p>Finding HTML Elements by Tag Name.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+<script>
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+</script>
+
+// Çıktı ===> The text in first paragraph (index 0) is: Finding HTML Elements by Tag Name.
+```
+
+- **document.getElementsByClassName(name):** Class'tan ögeyi bulur
+
+Örnek
+
+```
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+
+// Çıktı ===> The first paragraph (index 0) with class="intro" is: Hello World!
+```
+
+# HTML Element'lerini Değiştirmek
+
+**Property**
+
+- **element.innerHTML =  new html content:** HTML ögesini değiştirir
+- **element.attribute = new value:** HTML ögesinin value değerini değiştirir
+- **element.style.property = new style:** HTML ögesinin stilini değiştirir
+
+**Method**
+
+- **element.setAttribute(attribute, value):** HTML ögesinin özellik değerini değiştirir
+
+# Öge Eklemek ve Silmek
+
+**Method**
+
+- **document.createElement(element):** HTML elementi oluşturur (örneğin div)
+- **document.removeChild(element):** HTML child elemanı kaldırır
+- **document.appendChild(element):** HTML child elemanı ekler
+- **document.replaceChild(new, old):** HTML child elemanı yenisiyle değiştirir
+
+# Olay İşleyicisi Eklemek
+
+**Method**
+
+- **document.getElementById(id).onclick = function(){code}:** avaScript kullanılarak bir HTML elemanının tıklama olayına bir işlev (function) atanmasını sağlayan bir kod örneğidir.
+
+Örnek
+
+```
+document.getElementById("myButton").onclick = function() {
+  // Tıklama olayı gerçekleştiğinde çalışacak kod buraya gelir.
+  alert("Düğme tıklandı!");
+};
+```
+
+Yukarıdaki kod, "myButton" adlı bir HTML elemanına tıklama olayı ekler ve bu eleman tıklandığında bir uyarı penceresi görüntüler. Bu şekilde, belirli bir HTML elemanı tıklandığında ne olacağını tanımlayabilirsiniz.
+
+# CSS Seçicilere Göre HTML Öğelerini Bulmak
+
+- **document.querySelectorAll()** elirtilen bir CSS seçiciyle eşleşen tüm HTML öğelerini (id, class names, types, attributes, values of attributes, vs vs) bulmak istiyorsanız querySelectorAll() yöntemini kullanın.
+
+Örnek
+
+```
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+
+// Çıktı ===> The first paragraph (index 0) with class="intro" is: Hello World!.
+```
