@@ -186,3 +186,67 @@ document.getElementById("demo").innerHTML =
 
 // Çıktı ===> The first paragraph (index 0) with class="intro" is: Hello World!.
 ```
+
+# HTML İçeriğini Değiştirmek (with innerHTML)
+
+Bir HTML öğesinin içeriğini değiştirmenin en kolay yolu, innerHTML özelliğini kullanmaktır.
+
+```
+ document.getElementById(id).innerHTML = new HTML
+```
+
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript can Change HTML</h2>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html>
+
+// p içeriği "New text!" olacak
+```
+
+Bu örnekte p tag'inin içeriğini yani "Hello World!" metnini önce **getElementById** yöntemiyle "p1" id'sini seçerek daha sonra **innerHTML** yöntemiyle "New text!" ile değiştirmiş olduk.
+
+Başka Bir Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">Old Heading</h1>
+
+<script>
+const element = document.getElementById("id01");
+element.innerHTML = "New Heading";
+</script>
+
+<p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+</body>
+</html> 
+
+// h1 içeriği "New Heading" olacak
+```
+
+Bu örnekte ise Bu örnekte h1 tag'ini ve içeriğini **getElementById** yöntemiyle seçtik ve bunu element adlı değişekene atadık. Ardından element değişkenimize **innerHTML** yöntemini uyguladık ve h1'in "Old Heading" olan içeriğini "New Heading" ile değiştirdik.
+
+# Bir Niteliğin Değerini Değiştirmek (with attribute)
+
+```
+document.getElementById(id).attribute = new value
+```
+
