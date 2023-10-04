@@ -215,7 +215,7 @@ document.getElementById("p1").innerHTML = "New text!";
 </body>
 </html>
 
-// p içeriği "New text!" olacak
+// p içeriği "New text!" oldu
 ```
 
 Bu örnekte p tag'inin içeriğini yani "Hello World!" metnini önce **getElementById** yöntemiyle "p1" id'sini seçerek daha sonra **innerHTML** yöntemiyle "New text!" ile değiştirmiş olduk.
@@ -239,10 +239,10 @@ element.innerHTML = "New Heading";
 </body>
 </html> 
 
-// h1 içeriği "New Heading" olacak
+// h1 içeriği "New Heading" oldu
 ```
 
-Bu örnekte ise Bu örnekte h1 tag'ini ve içeriğini **getElementById** yöntemiyle seçtik ve bunu element adlı değişekene atadık. Ardından element değişkenimize **innerHTML** yöntemini uyguladık ve h1'in "Old Heading" olan içeriğini "New Heading" ile değiştirdik.
+Bu örnekte ise h1 tag'ini ve içeriğini **getElementById** yöntemiyle seçtik ve bunu element adlı değişekene atadık. Ardından element değişkenimize **innerHTML** yöntemini uyguladık ve h1'in "Old Heading" olan içeriğini "New Heading" ile değiştirdik.
 
 # Bir Niteliğin Değerini Değiştirmek (with attribute)
 
@@ -250,3 +250,40 @@ Bu örnekte ise Bu örnekte h1 tag'ini ve içeriğini **getElementById** yöntem
 document.getElementById(id).attribute = new value
 ```
 
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<img id="image" src="smiley.gif" width="160" height="120">
+
+<script>
+document.getElementById("image").src = "landscape.jpg";
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html>
+
+// src içeriği "landscape.jpg" oldu
+```
+
+Bu örnekte img tag'ini ve içeriğini **getElementById** yöntemiyle seçtik ve .src yöntemi ile ve img src "smiley.gif" olan içeriğini "landscape.jpg" ile değiştirdik.
+
+# document.write()
+
+JavaScript'te, document.write() işlevi doğrudan HTML çıktı akışına yazmak için kullanılabilir.
+
+Örnek
+
+```
+<script>
+document.write(Date());
+</script>
+
+// Çıktı tarihimiz olacak ve ekrana direkt yazdıracaktır.
+```
