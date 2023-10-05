@@ -287,3 +287,293 @@ document.write(Date());
 
 // Çıktı tarihimiz olacak ve ekrana direkt yazdıracaktır.
 ```
+
+# Stilleri Değiştirmek
+
+HTML DOM, JavaScript'in HTML öğelerinin stilini değiştirmesine olanak tanır.
+
+Bir HTML öğesinin stilini değiştirmek için bu sözdizimi kullanılır:
+
+```
+ document.getElementById(id).style.property = new style 
+```
+
+Örnek
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Changing the HTML style:</p>
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";         // p2 id'li içeriğin rengini mavi yaptık
+document.getElementById("p2").style.fontFamily = "Arial";   // p2 id'li içeriğin fontunu arial yaptık
+document.getElementById("p2").style.fontSize = "larger";    // p2 id'li içeriğin font büyüklüğünü larger yaptık
+</script>
+
+
+</body>
+</html>
+```
+
+
+# Event'leri Kullanma
+
+HTML DOM, bir olay meydana geldiğinde kod yürütmenize olanak tanır.
+
+HTML öğelerinde "bir şeyler olduğunda" tarayıcı tarafından event'ler oluşturulur:
+
+- Bir öğeye tıklandığında
+- Sayfa yüklendiğinde
+- Input Fields değiştirildiğinde
+- ve daha fazlası
+
+Örnek (kullanıcı düğmeye tıkladığında id'si id1 olan içeriğin stili değişecek)
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">   // butona basınca içerik rengi kırmızı olacak
+Click Me!</button>
+
+</body>
+</html>
+```
+
+# HTML DOM EVENTS
+
+HTML DOM, JavaScript'in HTML olaylarına tepki vermesine olanak tanır.
+
+Örnek (Bu örnekte, h1 tag'inin içeriği kullanıcı texte tıkladığında değişir)
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+</body>
+</html>
+```
+
+Bu örneği fonksiyon kullanarakta yazabiliriz:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="changeText(this)">Click on this text!</h2>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+</script>
+
+</body>
+</html>
+```
+
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
+```
+
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click "Try it" to execute the displayDate() function.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").onclick = displayDate;
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html> 
+```
+
+**Onload ve Onunload**
+
+Kullanıcı sayfaya girdiğinde veya sayfadan çıktığında olaylar tetiklenir. Kullanıcı sayfaya girdiği anda cookie'lerin etkinleştirilmesi için bir örnek verelim.
+
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<h2>JavaScript HTML Events</h2>
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+  var text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
+```
+
+Örnek (Kullanıcı forma küçük harfler yazıp enter'a bastığında içerik 
+otomatik büyüyecek)
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+```
+
+**ONMOUSEOVER VE ONMOUSEOUT**
+
+Kullanıcı mouse ile ögenin üstüne ve dışında kalan alana geldiği zaman olaylar tetiklenir.
+
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html>
+```
+
+**Onmousedown, onmouseup ve onclick**
+
+Bu kısımda ilk olarak bir fare düğmesine tıklandığında onmousedown olayı daha sonra serbest bırakıldığında onmouseup olayı tetiklenir. 
+
+Örnek
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html>
+```
+
+Örnek (mouse düğmesine tıklanınca ışık yanar tıklamayı bırakınca söner)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function lighton() {
+  document.getElementById('myimage').src = "bulbon.gif";
+}
+function lightoff() {
+  document.getElementById('myimage').src = "bulboff.gif";
+}
+</script>
+</head>
+
+<body>
+
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="bulboff.gif" width="100" height="180" />
+
+<p>Click mouse and hold down!</p>
+
+</body>
+</html>
+```
