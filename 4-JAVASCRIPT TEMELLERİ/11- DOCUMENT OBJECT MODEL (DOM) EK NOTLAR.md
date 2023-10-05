@@ -577,3 +577,212 @@ function lightoff() {
 </body>
 </html>
 ```
+
+# DOM addEventListener
+
+Bir HTML öğesine (element) belirli bir olayı (event) dinlemesi veya beklemesi için bir işlev (function) eklemek için kullanılır. Bu metot, kullanıcı etkileşimleri (örneğin, tıklama, fare hareketleri, tuş vuruşları gibi) veya diğer olaylar (örneğin, bir HTTP isteği tamamlandığında, bir animasyon tamamlandığında gibi) gibi olayları ele almak için kullanılır.
+
+addEventListener()'ın temel kullanımı şu şekildedir:
+
+```
+element.addEventListener(event, function, useCapture);
+```
+
+- **element:** Olayı dinlemek istediğiniz HTML öğesini (DOM elementini) temsil eden bir değişken veya nesnedir.
+- **event:** Dinlemek istediğiniz olayın adını belirtir. Örneğin, "click", "mouseover", "keydown" gibi.
+- function: Belirtilen olay gerçekleştiğinde çalıştırılacak JavaScript işlevini temsil eder.
+- **useCapture (isteğe bağlı):** Bu bir boolean değerdir ve olayın yakalama (capture) aşamasında mı yoksa bubbling aşamasında mı çalıştırılacağını belirler. Genellikle kullanılmaz ve varsayılan olarak false olarak kabul edilir.
+
+Örnek
+
+```
+const myButton = document.getElementById("myButton");
+
+myButton.addEventListener("click", function() {
+  alert("Düğme tıklandı!");
+});
+```
+
+Bu örnek, "myButton" adlı HTML düğmesine tıklama olayını dinler ve düğmeye tıklandığında bir uyarı penceresi görüntüler.
+
+# HTML Collection
+
+HTMLCollection, DOM (Document Object Model) ağacındaki belirli HTML öğelerini temsil eden bir koleksiyon türüdür. HTMLCollection, belirli bir HTML öğesine ait alt öğeleri veya belirli bir özellikle eşleşen öğeleri toplamak için kullanılır. HTMLCollection, genellikle HTML form elemanları veya belirli bir özellikle eşleşen öğeler gibi spesifik kullanım alanlarında kullanılır.
+
+Örnek olarak, bir HTML formundaki tüm giriş (input) öğelerini bir HTMLCollection kullanarak toplamak istediğinizi düşünelim:
+
+```
+<form id="myForm">
+  <input type="text" name="username" />
+  <input type="email" name="email" />
+  <input type="password" name="password" />
+</form>
+
+
+<script>
+// HTMLCollection oluşturma
+const form = document.getElementById("myForm");
+const inputElements = form.elements; // form'un alt öğelerini içeren HTMLCollection
+
+// HTMLCollection içindeki öğeleri döngü ile erişme
+for (let i = 0; i < inputElements.length; i++) {
+  console.log(inputElements[i]); // Her bir giriş öğesini konsola yazdırma
+}
+</script>
+```
+
+Yukarıdaki örnekte, form.elements kullanılarak form içindeki tüm input öğeleri bir HTMLCollection olarak alınır. Daha sonra bir döngü kullanarak HTMLCollection içindeki her bir öğeye erişebilirsiniz.
+
+HTMLCollection, özellikle HTML form işlemleri gibi belirli kullanım senaryolarında çoklu öğeleri kolayca toplamak ve işlemek için kullanışlıdır.
+
+# HTML DOM Node List
+
+Node List, DOM ağacındaki belirli öğeleri toplamak ve bu öğeler üzerinde işlem yapmak için oldukça kullanışlı bir araçtır.
+
+Node List, yaygın olarak şu yollarla elde edilebilir:
+
+- document.querySelectorAll(selectors) Metodu:
+
+```
+const divElements = document.querySelectorAll("div");
+```
+
+- element.childNodes Özelliği:
+
+```
+divElements.forEach(function(element) {
+  // Her bir <div> öğesi üzerinde işlem yapabilirsiniz.
+  console.log(element.textContent);
+});
+```
+
+# HTML DOM Node List Length
+
+HTML DOM (Document Object Model) Node List Length, bir Node List'in (HTML öğelerinin bir koleksiyonu) uzunluğunu belirtir. Node List, DOM ağacındaki belirli bir tür (örneğin, tüm div öğeleri) veya bir seçici (örneğin, querySelectorAll ile seçilen öğeler) ile seçilen HTML öğelerinin bir koleksiyonunu temsil eder.
+
+Node List Length, Node List içinde bulunan öğelerin sayısını ifade eder. Bu sayı, Node List içinde kaç tane HTML öğesi olduğunu gösterir. Örneğin, eğer bir Node List 5 div öğesini içeriyorsa, bu Node List Length değeri 5 olacaktır.
+
+Node List Length özelliğine JavaScript ile erişmek için, Node List'i seçtiğiniz değişkenin üzerinden .length özelliğine erişebilirsiniz. Örnek:
+
+```
+<div></div>
+<div></div>
+<div></div>   // 3 tane div'imiz olduğunu varsayalım
+
+// Bir Node List seçimi yapalım (örneğin, tüm <div> öğeleri)
+const divElements = document.querySelectorAll("div");
+
+// Node List'in uzunluğunu alalım
+const nodeListLength = divElements.length;
+
+console.log("Node List Length: " + nodeListLength); // Örneğin, bu çıktıda "Node List Length: 3" sonucunu görebilirsiniz.
+```
+
+# HTML Collection ve NodeList Farkları
+
+HTMLCollection ve NodeList, her ikisi de DOM (Document Object Model) ağacındaki HTML öğelerini temsil eden koleksiyon türleridir, ancak aralarında bazı önemli farklar bulunur:
+
+- **Oluşturma Yöntemi:**
+    - **HTMLCollection:** HTMLCollection, HTML öğeleri üzerinde otomatik olarak oluşturulan bir koleksiyondur. Özellikle HTML öğelerine isim (name) veya sınıf (class) gibi belirli özelliklere göre erişmek için kullanılır. Örneğin, getElementsByName() veya getElementsByClassName() gibi metotlarla oluşturulur.
+    - **NodeList:** NodeList, JavaScript kodu tarafından manuel olarak oluşturulan veya çeşitli DOM metotları (örneğin, querySelectorAll()) tarafından döndürülen bir koleksiyondur.
+
+- **Canlılık (Live) Durumu:**
+    - **HTMLCollection:** HTMLCollection canlıdır, yani belirli bir özellikle eşleşen HTML öğeleri değiştiğinde otomatik olarak güncellenir. Yani, bir HTMLCollection oluşturulduktan sonra, yeni öğeler eklediğinizde veya var olanları kaldırdığınızda koleksiyon güncellenir.
+    - **NodeList:** NodeList de canlı olabilir veya olmayabilir. Bazı durumlarda NodeList canlıdır ve DOM'daki değişikliklere tepki verirken, bazı durumlarda bir kopya (static) olabilir ve DOM değişikliklerine tepki vermez.
+
+- **İndeksleme:**
+    - **HTMLCollection:** HTMLCollection nesneleri, öğeleri sıfırdan başlayarak indeksler. Örneğin, myCollection[ 0] şeklinde erişebilirsiniz.
+    - **NodeList:** NodeList nesneleri, öğeleri indeks numarası veya item(index) yöntemi ile erişebilirsiniz. Örneğin, myList.item(0) veya myList[ 0 ] gibi.
+
+- **Kullanım Alanı:**
+    - **HTMLCollection:** HTMLCollection genellikle HTML formları, radyo düğmeleri, form elemanları gibi belirli HTML öğeleri üzerinde çalışmak için kullanılır.
+    - **NodeList:** NodeList, daha genel bir kullanım alanına sahiptir ve belirli bir özellik veya sorgu sonucu seçilen HTML öğeleri üzerinde işlem yapmak için kullanılabilir.
+
+Özetle, HTMLCollection ve NodeList, DOM koleksiyonlarını temsil eder, ancak oluşturma yöntemleri, canlılık durumu ve kullanım alanları gibi önemli farklar vardır. Kullanırken, belirli bir senaryoya ve ihtiyaca uygun olanını seçmek önemlidir.
+
+# HTMLCollection Metodları
+
+- **item(index):** Belirtilen indeksteki öğeyi döndürür.
+
+Örnek
+
+```
+const myCollection = document.getElementsByClassName("my-class");
+const firstElement = myCollection.item(0);
+```
+
+- **namedItem(name):** Belirtilen isme (name) sahip öğeyi döndürür. Özellikle HTML formlarındaki isimlendirilmiş öğeleri almak için kullanışlıdır.
+
+Örnek
+
+```
+const formElements = document.forms[0].elements;
+const usernameInput = formElements.namedItem("username");
+```
+
+- **length:** Koleksiyonun uzunluğunu (eleman sayısını) döndürür.
+
+Örnek
+
+```
+const myCollection = document.getElementsByClassName("my-class");
+const collectionLength = myCollection.length;
+```
+
+# NodeList Metodları
+
+- **item(index):** Belirtilen indeksteki öğeyi döndürür. HTMLCollection ile aynı adı taşıyan bu metod, NodeList için de kullanılabilir.
+
+Örnek:
+
+```
+const myNodeList = document.querySelectorAll("p");
+const firstParagraph = myNodeList.item(0);
+```
+
+- **forEach(callback):** NodeList içindeki her bir öğe üzerinde bir geri çağırma işlevini (callback function) çalıştırır. Bu metod, dizi elemanları üzerinde işlem yapmak için kullanılır.
+
+Örnek:
+
+```
+const myNodeList = document.querySelectorAll("p");
+myNodeList.forEach(function(node) {
+  console.log(node.textContent);
+});
+```
+
+- **entries():** NodeList içindeki her bir öğeyi ve ilgili indeksi içeren bir iterator nesnesini döndürür.
+
+Örnek:
+
+```
+const myNodeList = document.querySelectorAll("p");
+const iterator = myNodeList.entries();
+for (const [index, node] of iterator) {
+  console.log(`Index: ${index}, Text: ${node.textContent}`);
+}
+```
+
+- **keys():** NodeList içindeki her bir öğenin indekslerini içeren bir iterator nesnesini döndürür.
+
+Örnek:
+
+```
+const myNodeList = document.querySelectorAll("p");
+const keysIterator = myNodeList.keys();
+for (const index of keysIterator) {
+  console.log(`Index: ${index}`);
+}
+```
+
+- **values():** NodeList içindeki her bir öğenin kendisini içeren bir iterator nesnesini döndürür.
+
+Örnek:
+
+```
+const myNodeList = document.querySelectorAll("p");
+const valuesIterator = myNodeList.values();
+for (const node of valuesIterator) {
+  console.log(`Text: ${node.textContent}`);
+}
+```
