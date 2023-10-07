@@ -11,4 +11,9 @@ Burada yapmamız gereken şeyler:
 - Oyun yine 5'e ulaştığı zaman bitmeli ve kazananı ekrana yazdırmalıdır (DOM kullanarak yazdırın)
 - Tasarım tamamen sizin hayal gücünüze kalmış
 
-**NOT:** Projenin tamamlanmış örneği "12 - TAŞ KAĞIT MAKASI PROJESİ DOM İLE YENİDEN TASARIMI ÇÖZÜMÜ" adlı klasörün içerisinde yer almaktadır.
+**NOT:** Projenin tamamlanmış örneği "12 - TAŞ KAĞIT MAKASI PROJESİ DOM İLE YENİDEN TASARIMI ÇÖZÜMÜ" adlı klasörün içerisinde yer almaktadır. Ayrıca ekstra olarak bu proje için oluşturulmuş bir repo bulunmaktadır, ek notlar kısmında linkler paylaşılmıştır.
+
+**EK NOT:** 
+- [Projenin github linki için tıklayın](https://github.com/FakirHerif/rock-paper-scissors-project)
+
+- [Ayrıca bu linke tıklayarak projeyi canlı olarak inceleyebilirsiniz](https://fakirherif.github.io/rock-paper-scissors-project/)

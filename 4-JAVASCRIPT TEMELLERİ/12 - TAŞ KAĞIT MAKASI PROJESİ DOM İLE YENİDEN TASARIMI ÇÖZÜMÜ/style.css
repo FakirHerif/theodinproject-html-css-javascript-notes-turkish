@@ -1,0 +1,127 @@
+html {
+    background-image: url(img/background.png);
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 5px 4px 3px rgb(0, 0, 0);
+}
+
+h4 {
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 5px 4px 3px rgb(0, 0, 0);
+}
+
+.plcomp {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.player, .computer {
+    margin: 20px;
+    background-color: rgba(49, 102, 226, 0.139);
+    padding: 15px;
+    border-radius: 20px;
+    border: 10px solid #ffffff9b;
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.635);
+}
+
+.ropasc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ropasc div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ropasc img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.635);
+    border: 6px solid #000000;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.ropasc p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -1px;
+    font-size: 20px;
+    color: rgb(212, 212, 212);
+    text-shadow: 5px 4px 3px rgba(0, 0, 0, 0.689);
+
+}
+
+.ropasc img:hover {
+    transform: translate(1px,3px);
+    background-color: #edeaea;
+    border: 6px solid blue;
+}
+
+.ropasc img:active {
+    transform: translate(3px,6px);
+    box-shadow: none;
+}
+
+.copl {
+    width: 50px;
+    height: 50px;
+}
+
+span{
+    font-size: 30px;
+    margin-left: 20px;
+    text-shadow: 5px 4px 3px rgba(0, 0, 0, 0.689);
+}
+
+.imgsc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 45px;
+    text-shadow: 5px 4px 3px rgb(0, 0, 0);
+    text-align: center;
+}
+
+.last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.playAgain {
+    width: 600px;
+    height: 120px;
+    line-height: 120px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform-origin: center;
+}
+
+.playAgain:hover {
+    transform: scale(1.1);
+}
+
+.playAgain:active {
+    transition: transform 0.1s;
+    transform: scale(0.9);
+}
